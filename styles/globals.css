@@ -1,16 +1,150 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+}
+:root {
+    --paragraph-text: clamp(1em, 1.6vw, 1.2em);
+}
+
+body {
 }
 
 * {
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav {
+    height: 100px;
+    background-color: antiquewhite;
+    position: fixed;
+    width: 100%;
+    transition: all 0.8s ease;
+}
+.nav.sticky {
+    height: 60px;
+}
+
+.nav .center {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    width: 90vw;
+    margin-inline: auto;
+}
+.nav.sticky .center {
+    position: relative;
+}
+.nav .center .left {
+    display: flex;
+    align-items: center;
+    font-size: var(--paragraph-text);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.8s ease;
+}
+.nav.sticky .center .left {
+    transform: translateX(0%);
+    left: 0%;
+}
+.nav .center .left .text-logo {
+    opacity: 0;
+    transition: 0.8s ease;
+}
+.nav.sticky .center .left .text-logo {
+    display: flex;
+    opacity: 1;
+}
+.nav .center .left .image-logo {
+    position: relative;
+    width: 55px;
+    transition: 0.8s ease;
+    margin-left: -100px;
+}
+.nav.sticky .center .left .image-logo {
+    width: 30px;
+    opacity: 0;
+}
+.nav .center .menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+.nav .center .menu-list .menu-item {
+    position: relative;
+    font-size: var(--paragraph-text);
+}
+.nav .center .menu-list .menu-item::before {
+    content: " ";
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: black;
+    transition: 0.5s ease;
+}
+.nav .center .menu-list .menu-item:hover::before {
+    width: 100%;
+}
+.disable-scroll {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .nav .center {
+        justify-content: flex-end;
+    }
+    .nav .center .menu-bar {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        cursor: pointer;
+        justify-content: center;
+        position: relative;
+        width: clamp(20px, 4vw, 30px);
+    }
+    .nav .center .menu-bar > * {
+        width: 100%;
+        height: 4px;
+        background-color: black;
+        border-radius: 5px;
+        transition: all 0.8s ease;
+    }
+    .nav .center .menu-bar > *:nth-child(1).active {
+        transform: rotate(45deg);
+        position: absolute;
+    }
+    .nav .center .menu-bar > *:nth-child(2).active {
+        transform: rotate(-45deg);
+        position: absolute;
+    }
+    .nav .center .menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 100px;
+        right: -100vw;
+        width: 100vw;
+        row-gap: 24px;
+        padding: var(--paragraph-text);
+        /* box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25); */
+        transition: all 0.8s ease;
+        background-color: antiquewhite;
+    }
+    .nav.sticky .center .menu-list {
+        top: 60px;
+    }
+    .nav .center .menu-list.active {
+        right: 0;
+    }
 }
