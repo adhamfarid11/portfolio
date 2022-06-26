@@ -28,7 +28,6 @@ function MyApp({ Component, pageProps }) {
         <Fragment>
             <Head>
                 <link rel="icon" type="image/x-icon" href={myLogo} />
-                <Script src="../asset/butter.js" />
             </Head>
             <nav className={`nav ${navSticky ? "sticky" : ""}`}>
                 <div className="center">
@@ -42,6 +41,7 @@ function MyApp({ Component, pageProps }) {
                                 width="100%"
                                 height="100%"
                                 objectFit="contain"
+                                alt="Adham Farid Logo"
                             />
                         </div>
                     </div>
