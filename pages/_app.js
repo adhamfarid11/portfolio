@@ -4,7 +4,6 @@ import { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
     const [navActive, setNavActive] = useState(false);
@@ -35,10 +34,10 @@ function MyApp({ Component, pageProps }) {
                         <div className="image-logo">
                             <Image
                                 src={myLogo}
+                                alt="Adham Farid Logo"
                                 width="100%"
                                 height="100%"
                                 objectFit="contain"
-                                alt="Adham Farid Logo"
                             />
                         </div>
                     </div>
