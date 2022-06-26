@@ -26,9 +26,6 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <Fragment>
-            <Head>
-                <link rel="icon" type="image/x-icon" href={myLogo} />
-            </Head>
             <nav className={`nav ${navSticky ? "sticky" : ""}`}>
                 <div className="center">
                     <div className="left">
