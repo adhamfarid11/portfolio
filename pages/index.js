@@ -16,7 +16,7 @@ export default function Home() {
                 <div className="hero">
                     <div className="upper">
                         <h2>HI, THERE!</h2>
-                        <p>I'm a student at Universitas Indonesia,</p>
+                        <p>I&apos;m a student at Universitas Indonesia,</p>
                         <p>who is extremely determined to learn</p>
                         <div className="wrapper">
                             <p>new things related to</p>
