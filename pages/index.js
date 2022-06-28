@@ -30,7 +30,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="mid">
-                        <Image src="/asset/logo.png" width="300" height="100" />
+                        <Image
+                            src="/asset/logo.png"
+                            alt="Hero Image"
+                            width="300"
+                            height="100"
+                        />
                     </div>
                     <div className="lower">
                         <div className="nama-adham">
