@@ -6,7 +6,9 @@ a {
 }
 :root {
     --navbar-text: clamp(1em, 2vw, 1.2em);
-    --paragraph-text: clamp(0.9em, 2vw, 2em);
+    --p-text-hero: clamp(0.9em, 2vw, 2em);
+    --p-text-about: clamp(1em, 1.7vw, 1.8em);
+    --p-title: clamp(0.9em, 1.7vw, 1.2em);
     --h2-text: clamp(2em, 7vw, 6em);
 }
 
@@ -92,6 +94,7 @@ body {
 .nav .center .menu-list .menu-item {
     position: relative;
     font-size: var(--navbar-text);
+    display: flex;
 }
 .nav .center .menu-list .menu-item::before {
     content: " ";
@@ -100,7 +103,7 @@ body {
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: black;
+    background-color: white;
     transition: 0.5s ease;
 }
 .nav .center .menu-list .menu-item:hover::before {
@@ -150,11 +153,14 @@ body {
         width: 50vw;
         height: 50vh;
         row-gap: 24px;
-        padding: var(--paragraph-text);
+        padding: var(--p-text-hero);
         /* box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25); */
         transition: all 0.8s ease;
         background-color: black;
         z-index: 5;
+    }
+    .desktop {
+        display: none;
     }
     .nav.unset {
         /* color: black; */
@@ -183,23 +189,27 @@ body {
     }
 }
 
-/* ||| section hero */
 section {
     max-width: 1280px;
     width: 90vw;
     margin: auto;
 }
+/* ||| section hero */
 section.hero-wrapper {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     display: flex;
     align-items: center;
 }
 .hero {
     height: calc(100vh - 100px);
     width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .hero > * {
-    height: 30%;
+    /* height: 30%; */
 }
 .hero .mid {
     height: 30%;
@@ -210,42 +220,42 @@ section.hero-wrapper {
 .hero .upper .wrapper {
     display: flex;
     box-sizing: content-box;
-    height: calc(var(--paragraph-text) + 10px);
+    height: calc(var(--p-text-hero) + 10px);
 }
 .hero .upper .wrapper .words {
     overflow: hidden;
 }
 .hero .upper .wrapper .words span {
-    font-size: var(--paragraph-text);
+    font-size: var(--p-text-hero);
     font-weight: 500;
     line-height: 1.2em;
     height: 100%;
     display: block;
-    padding-left: 10px;
+    padding-left: clamp(0.3em, 0.5vw, 0.8em);
     animation: spin_words 6s infinite;
     /* background: url("../asset/underline.png") no-repeat bottom; */
 }
 @keyframes spin_words {
     10% {
-        transform: translateY(-105%);
+        transform: translateY(-107%);
     }
     25% {
         transform: translateY(-100%);
     }
     35% {
-        transform: translateY(-205%);
+        transform: translateY(-207%);
     }
     50% {
         transform: translateY(-200%);
     }
     60% {
-        transform: translateY(-305%);
+        transform: translateY(-307%);
     }
     75% {
         transform: translateY(-300%);
     }
     85% {
-        transform: translateY(-405%);
+        transform: translateY(-407%);
     }
     100% {
         transform: translateY(-400%);
@@ -266,7 +276,7 @@ section.hero-wrapper {
     font-weight: 500;
 }
 .hero p {
-    font-size: var(--paragraph-text);
+    font-size: var(--p-text-hero);
     font-weight: 200;
     line-height: 1.2em;
 }
@@ -278,5 +288,53 @@ section.hero-wrapper {
     }
     .hero .lower {
         text-align: left;
+    }
+}
+/* ||| section about me */
+section.about-me {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.about-me .wrapper {
+    /* width: 40%; */
+    /* position: relative; */
+}
+section.about-me .wrapper .wrapper-fixed {
+    height: 100%;
+}
+section.about-me .wrapper .wrapper-fixed .fixed {
+    top: 30vh;
+    position: -webkit-sticky;
+    position: sticky;
+}
+section.about-me .wrapper .wrapper-fixed .fixed {
+    font-weight: 500;
+    font-size: var(--p-title);
+}
+section.about-me .content {
+    display: block;
+    width: 70%;
+    text-align: justify;
+    font-size: var(--p-text-about);
+}
+section.about-me .content .upper {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+section.about-me .content .lower {
+    font-weight: 200;
+}
+@media screen and (max-width: 500px) {
+    section.about-me {
+        display: flex;
+        flex-direction: column;
+    }
+    section.about-me .content {
+        width: 100%;
+    }
+    section.about-me .wrapper .wrapper-fixed .fixed {
+        font-weight: 500;
+        font-size: var(--p-title);
     }
 }

@@ -39,6 +39,48 @@ export default function Home() {
                 </div>
             </section>
             <section className="about-me">
+                <div className="wrapper">
+                    <div className="wrapper-fixed">
+                        <div className="fixed">
+                            <p>About Me</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="content">
+                    <p className="upper">
+                        A HARD-WORKER, A SELF-TAUGHT PERSON, AND A CRITICAL
+                        THINKER. I LOVE TO SURF THE INTERNET AND EXPLORE NEW
+                        THINGS RELATED TO BUSINESS AND COMPUTER.
+                    </p>
+                    <p className="upper">
+                        I LIKE TO SURROUND MY SELF WITH LOTS OF CREATIVE MINDS,
+                        AND PEOPLE WITH THE SAME INTEREST AS MINE. RECENTLY I
+                        TOOK AS MANY PROJECTS AS I CAN, TO MAKE SURE I
+                        UNDERSTAND THOSE FIELD WELL.
+                    </p>
+                    <p className="lower">
+                        My hobbies take up a good portion of my leisure time.
+                        I&apos;m either watching sports, playing football, or
+                        listening to delightful music.
+                    </p>
+                </div>
+            </section>
+            <section className="dummy">
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Maecenas pharetra ligula ligula, eu faucibus sapien suscipit

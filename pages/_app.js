@@ -54,11 +54,13 @@ function MyApp({ Component, pageProps }) {
                     </div>
                     <div className={`menu-list ${navActive ? "active" : ""}`}>
                         <div className="menu-item">
-                            <Link href="#">Home,</Link>
+                            <Link href="#">Home</Link>
+                            <p className="desktop">,</p>
                         </div>
 
                         <div className="menu-item">
-                            <Link href="#">Work,</Link>
+                            <Link href="#">Work</Link>
+                            <p className="desktop">,</p>
                         </div>
 
                         <div className="menu-item">
