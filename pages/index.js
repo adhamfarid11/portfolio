@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Fragment } from "react";
+import Card from "../components/card";
 
 export default function Home() {
     return (
@@ -63,6 +63,21 @@ export default function Home() {
                         I&apos;m either watching sports, playing football, or
                         listening to delightful music.
                     </p>
+                </div>
+            </section>
+            <section className="experience">
+                <h2 className="h2-title">EXPERIENCE</h2>
+                <div className="outer">
+                    <div className="wrapper">
+                        <div className="wrapper-fixed">
+                            <div className="fixed">
+                                <p>Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="content">
+                        <Card image="https://media.discordapp.net/attachments/994625958038478851/994926741497843802/Capcay_in.png?width=887&height=499" />
+                    </div>
                 </div>
             </section>
             <section className="dummy">

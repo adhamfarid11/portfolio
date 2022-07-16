@@ -4,6 +4,7 @@ import { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import myImage from "../public/dummy-image.png";
 
 function MyApp({ Component, pageProps }) {
     const [navActive, setNavActive] = useState(false);
