@@ -76,7 +76,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="content">
-                        <Card image="https://media.discordapp.net/attachments/994625958038478851/994926741497843802/Capcay_in.png?width=887&height=499" />
+                        <Card image="https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png" />
                     </div>
                 </div>
             </section>

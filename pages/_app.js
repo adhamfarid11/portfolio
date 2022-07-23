@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "../styles/card.css";
+
 import myLogo from "../public/Logo.svg";
 import { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
@@ -9,7 +11,6 @@ import myImage from "../public/dummy-image.png";
 function MyApp({ Component, pageProps }) {
     const [navActive, setNavActive] = useState(false);
     const [navSticky, setNavSticky] = useState(false);
-    const [activeIdx, setAcitveIdx] = useState(0);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);

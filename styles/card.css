@@ -1,0 +1,42 @@
+section.experience .card {
+    display: flex;
+    height: 100%;
+    gap: 10px;
+}
+section.experience .card .line {
+    height: 100%;
+    width: 10px;
+    background-color: black;
+}
+
+section.experience .card-content {
+    display: flex;
+    gap: 10px;
+}
+section.experience .card-content .description {
+    width: 50%;
+}
+section.experience .card-content .description h2 {
+    font-weight: 500;
+    font-size: var(--p-text-about);
+}
+section.experience .card-content .description h3 {
+    font-size: var(--p-text-normal);
+}
+section.experience .card-content .description p {
+    font-size: var(--p-fixed);
+}
+section.experience .card-content .image {
+    width: 50%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    section.experience .card-content {
+        flex-direction: column;
+    }
+    section.experience .card-content .description,
+    section.experience .card-content .image {
+        width: 100%;
+    }
+}

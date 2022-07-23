@@ -5,11 +5,15 @@ a {
     text-decoration: none;
 }
 :root {
+    --adham-farid-text: clamp(2em, 7vw, 6em);
+
     --navbar-text: clamp(1em, 2vw, 1.2em);
-    --p-text-hero: clamp(0.9em, 2vw, 2em);
+    --p-text-big: clamp(0.9em, 2vw, 2em);
     --p-text-about: clamp(1em, 1.7vw, 1.8em);
-    --p-title: clamp(0.9em, 1.7vw, 1.2em);
-    --h2-text: clamp(2em, 7vw, 6em);
+    --p-text-normal: clamp(1em, 1.5vw, 1.6em);
+    --p-fixed: clamp(0.9em, 1.7vw, 1.2em);
+
+    --margin: clamp(10px, 2vw, 30px);
 }
 
 body {
@@ -153,7 +157,7 @@ body {
         width: 50vw;
         height: 50vh;
         row-gap: 24px;
-        padding: var(--p-text-hero);
+        padding: var(--p-text-big);
         /* box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25); */
         transition: all 0.8s ease;
         background-color: black;
@@ -193,8 +197,8 @@ section {
     max-width: 1280px;
     width: 90vw;
     margin: auto;
-    padding-top: var(--p-title);
-    padding-bottom: var(--p-title);
+    padding-top: var(--p-fixed);
+    padding-bottom: var(--p-fixed);
 }
 /* ||| section hero */
 section.hero-wrapper {
@@ -222,13 +226,13 @@ section.hero-wrapper {
 .hero .upper .wrapper {
     display: flex;
     box-sizing: content-box;
-    height: calc(var(--p-text-hero) + 10px);
+    height: calc(var(--p-text-big) + 10px);
 }
 .hero .upper .wrapper .words {
     overflow: hidden;
 }
 .hero .upper .wrapper .words span {
-    font-size: var(--p-text-hero);
+    font-size: var(--p-text-big);
     font-weight: 500;
     line-height: 1.2em;
     height: 100%;
@@ -267,18 +271,18 @@ section.hero-wrapper {
     text-align: right;
     width: 100%;
     justify-content: flex-end;
-    line-height: var(--h2-text);
+    line-height: var(--adham-farid-text);
 }
 .hero .lower .nama-adham {
     width: 100%;
     float: right;
 }
 .hero h2 {
-    font-size: var(--h2-text);
+    font-size: var(--adham-farid-text);
     font-weight: 500;
 }
 .hero p {
-    font-size: var(--p-text-hero);
+    font-size: var(--p-text-big);
     font-weight: 200;
     line-height: 1.2em;
 }
@@ -313,7 +317,7 @@ section.about-me .wrapper .wrapper-fixed .fixed {
 }
 section.about-me .wrapper .wrapper-fixed .fixed {
     font-weight: 400;
-    font-size: var(--p-title);
+    font-size: var(--p-fixed);
 }
 section.about-me .content {
     display: block;
@@ -338,16 +342,22 @@ section.about-me .content .lower {
     }
     section.about-me .wrapper .wrapper-fixed .fixed {
         font-weight: 500;
-        font-size: var(--p-title);
+        font-size: var(--p-fixed);
     }
 }
 
 section.experience .outer {
     display: flex;
+    justify-content: space-between;
+    margin-top: var(--margin);
 }
 section.experience .h2-title {
     text-align: center;
     font-weight: 500;
+    font-size: var(--p-text-big);
+}
+section.experience .outer .content {
+    width: 85%;
 }
 section.experience .outer .wrapper .wrapper-fixed {
     height: 100%;
@@ -356,14 +366,17 @@ section.experience .outer .wrapper .wrapper-fixed .fixed {
     top: 25vh;
     position: -webkit-sticky;
     position: sticky;
-}
-section.experience .outer .wrapper .wrapper-fixed .fixed {
     font-weight: 400;
-    font-size: var(--p-title);
+    font-size: var(--p-fixed);
 }
-section.experience .card {
-    display: flex;
-}
-section.experience .card .description h2 {
-    font-weight: 500;
+@media screen and (max-width: 480px) {
+    section.experience .outer .wrapper .wrapper-fixed {
+    }
+    section.experience .outer .wrapper .wrapper-fixed .fixed {
+        transform: rotate(-90deg);
+        left: 0;
+    }
+    section.experience .outer .wrapper .wrapper-fixed .fixed p {
+        text-align: right;
+    }
 }
