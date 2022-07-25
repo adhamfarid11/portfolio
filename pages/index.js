@@ -90,6 +90,7 @@ export default function Home() {
                                 <p className="desktop-only">Projects</p>
                                 <Image
                                     src="https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png"
+                                    alt="test"
                                     w="20px"
                                     h="50px"
                                     className="mobile-only"
