@@ -9,8 +9,9 @@ a {
 
     --navbar-text: clamp(1em, 2vw, 1.2em);
     --p-text-big: clamp(0.9em, 2vw, 2em);
-    --p-text-about: clamp(1em, 1.7vw, 1.8em);
-    --p-text-normal: clamp(1em, 1.5vw, 1.6em);
+    --p-text-title: clamp(1.1em, 2vw, 2em);
+    --p-text-about: clamp(0.9em, 1.7vw, 1.8em);
+    --p-text-normal: clamp(0.9em, 1.5vw, 1.6em);
     --p-fixed: clamp(0.9em, 1.7vw, 1.2em);
 
     --margin: clamp(10px, 2vw, 30px);
@@ -82,6 +83,7 @@ body {
     /* position: absolute; */
     /* margin-left: -100px; */
     color: white;
+    z-index: 10;
 }
 .nav .center .left .image-logo {
     /* filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(226deg)
@@ -207,9 +209,9 @@ section.hero-wrapper {
     align-items: center;
 }
 .hero {
-    height: calc(100vh - 100px);
+    /* height: calc(100vh - 100px); */
     width: 100%;
-    height: 95vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -300,7 +302,7 @@ section.hero-wrapper {
 section.about-me {
     display: flex;
     justify-content: space-between;
-    padding-top: 0;
+    /* padding-top: 0; */
 }
 
 section.about-me .wrapper {
@@ -354,10 +356,15 @@ section.experience .outer {
 section.experience .h2-title {
     text-align: center;
     font-weight: 500;
-    font-size: var(--p-text-big);
+    font-size: var(--p-text-title);
 }
 section.experience .outer .content {
+    display: flex;
+    flex-direction: column;
     width: 85%;
+    gap: 15px;
+}
+section.experience .outer .wrapper {
 }
 section.experience .outer .wrapper .wrapper-fixed {
     height: 100%;
@@ -368,15 +375,26 @@ section.experience .outer .wrapper .wrapper-fixed .fixed {
     position: sticky;
     font-weight: 400;
     font-size: var(--p-fixed);
+    margin-bottom: 60px;
 }
 @media screen and (max-width: 480px) {
-    section.experience .outer .wrapper .wrapper-fixed {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: inline-block !important;
     }
     section.experience .outer .wrapper .wrapper-fixed .fixed {
-        transform: rotate(-90deg);
-        left: 0;
+        margin-bottom: 50px;
+    }
+    section.experience .outer .wrapper .wrapper-fixed .fixed p {
+        /* transform: rotate(-90deg); */
+        /* left: 0; */
     }
     section.experience .outer .wrapper .wrapper-fixed .fixed p {
         text-align: right;
+    }
+    section.experience .outer .content {
+        /* width: 90%; */
     }
 }

@@ -1,8 +1,24 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import Card from "../components/card";
+import SeeMore from "../components/button/see-more";
+import { Image } from "@chakra-ui/react";
 
 export default function Home() {
+    const data = [
+        {
+            title: "Front-End Web Developer at MassCoco Indonesia",
+            position: "CTO",
+            description: "test",
+            image: "https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png",
+        },
+        {
+            title: "UI/UX Designer at Kaya Creative",
+            position: "FREELANCE",
+            description: "test",
+            image: "https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png",
+        },
+    ];
     return (
         <Fragment>
             <Head>
@@ -71,31 +87,47 @@ export default function Home() {
                     <div className="wrapper">
                         <div className="wrapper-fixed">
                             <div className="fixed">
-                                <p>Projects</p>
+                                <p className="desktop-only">Projects</p>
+                                <Image
+                                    src="https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png"
+                                    w="20px"
+                                    h="50px"
+                                    className="mobile-only"
+                                    style={{ display: "none" }}
+                                />
                             </div>
                         </div>
                     </div>
                     <div className="content">
-                        <Card image="https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png" />
+                        {data?.map((item) => (
+                            <Card
+                                title={item.title}
+                                position={item.position}
+                                desc={item.description}
+                                image={item.image}
+                            />
+                        ))}
+                        {/* <Card image="https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png" /> */}
+                        <SeeMore />
                     </div>
                 </div>
             </section>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <section className="dummy">
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Maecenas pharetra ligula ligula, eu faucibus sapien suscipit

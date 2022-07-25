@@ -1,0 +1,16 @@
+.see-more {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    width: clamp(40px, 5vw, 50px);
+    height: clamp(40px, 5vw, 50px);
+    font-size: clamp(0.5em, 3vw, 0.7em);
+    text-align: center;
+    padding: 1em;
+    line-height: clamp(10px, 2vw, 15px);
+}
