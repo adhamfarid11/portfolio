@@ -316,11 +316,10 @@ section.about-me .wrapper .wrapper-fixed .fixed {
     top: 25vh;
     position: -webkit-sticky;
     position: sticky;
-}
-section.about-me .wrapper .wrapper-fixed .fixed {
     font-weight: 400;
     font-size: var(--p-fixed);
 }
+
 section.about-me .content {
     display: block;
     width: 70%;
@@ -378,18 +377,14 @@ section.experience .outer .wrapper .wrapper-fixed .fixed {
     margin-bottom: 60px;
 }
 @media screen and (max-width: 480px) {
-    .desktop-only {
-        display: none;
-    }
-    .mobile-only {
-        display: inline-block !important;
-    }
     section.experience .outer .wrapper .wrapper-fixed .fixed {
-        margin-bottom: 50px;
+        margin-bottom: 90px;
+        margin-top: 15px;
+        margin-left: -20px;
     }
     section.experience .outer .wrapper .wrapper-fixed .fixed p {
-        /* transform: rotate(-90deg); */
-        /* left: 0; */
+        transform: rotate(-90deg);
+        left: 0;
     }
     section.experience .outer .wrapper .wrapper-fixed .fixed p {
         text-align: right;

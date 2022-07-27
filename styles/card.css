@@ -4,7 +4,7 @@ section.experience .card {
 }
 section.experience .card .line {
     height: 100%;
-    width: 10px;
+    width: 5px;
     background-color: black;
 }
 

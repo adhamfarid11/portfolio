@@ -7,12 +7,14 @@ import { Image } from "@chakra-ui/react";
 export default function Home() {
     const data = [
         {
+            id: 1,
             title: "Front-End Web Developer at MassCoco Indonesia",
             position: "CTO",
             description: "test",
             image: "https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png",
         },
         {
+            id: 2,
             title: "UI/UX Designer at Kaya Creative",
             position: "FREELANCE",
             description: "test",
@@ -88,20 +90,21 @@ export default function Home() {
                         <div className="wrapper-fixed">
                             <div className="fixed">
                                 <p className="desktop-only">Projects</p>
-                                <Image
+                                {/* <Image
                                     src="https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png"
                                     alt="test"
                                     w="20px"
                                     h="50px"
                                     className="mobile-only"
                                     style={{ display: "none" }}
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>
                     <div className="content">
                         {data?.map((item) => (
                             <Card
+                                key={item.id}
                                 title={item.title}
                                 position={item.position}
                                 desc={item.description}
