@@ -1,6 +1,8 @@
 import "../styles/globals.css";
+
 import "../styles/card.css";
 import "../styles/seeMore.css";
+import "../styles/admin.scss";
 
 import myLogo from "../public/Logo.svg";
 import { Fragment, useState, useEffect } from "react";

@@ -3,20 +3,23 @@ import { Fragment } from "react";
 import Card from "../components/card";
 import SeeMore from "../components/button/see-more";
 import { Image } from "@chakra-ui/react";
+import ListProjectMain from "./components/list-project";
+import ListWorksMain from "./components/list-works";
+import ListCommitteeMain from "./components/list-committee";
 
 export default function Home() {
     const data = [
         {
             id: 1,
-            title: "Front-End Web Developer at MassCoco Indonesia",
-            position: "CTO",
+            title: "Frontend Web Developer at MassCoco Indonesia",
+            position: "PART-TIME",
             description: "test",
             image: "https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png",
         },
         {
             id: 2,
             title: "UI/UX Designer at Kaya Creative",
-            position: "FREELANCE",
+            position: "CONTRACT",
             description: "test",
             image: "https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png",
         },
@@ -89,29 +92,39 @@ export default function Home() {
                     <div className="wrapper">
                         <div className="wrapper-fixed">
                             <div className="fixed">
-                                <p className="desktop-only">Projects</p>
-                                {/* <Image
-                                    src="https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png"
-                                    alt="test"
-                                    w="20px"
-                                    h="50px"
-                                    className="mobile-only"
-                                    style={{ display: "none" }}
-                                /> */}
+                                <p className="desktop-only">Works</p>
                             </div>
                         </div>
                     </div>
                     <div className="content">
-                        {data?.map((item) => (
-                            <Card
-                                key={item.id}
-                                title={item.title}
-                                position={item.position}
-                                desc={item.description}
-                                image={item.image}
-                            />
-                        ))}
-                        {/* <Card image="https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png" /> */}
+                        <ListWorksMain />
+                        <SeeMore />
+                    </div>
+                </div>
+                <div className="outer">
+                    <div className="wrapper">
+                        <div className="wrapper-fixed">
+                            <div className="fixed">
+                                <p className="desktop-only">Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="content">
+                        <ListProjectMain />
+
+                        <SeeMore />
+                    </div>
+                </div>
+                <div className="outer">
+                    <div className="wrapper">
+                        <div className="wrapper-fixed">
+                            <div className="fixed">
+                                <p className="desktop-only">Committee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="content">
+                        <ListCommitteeMain />
                         <SeeMore />
                     </div>
                 </div>
@@ -132,48 +145,7 @@ export default function Home() {
             <br></br>
             <br></br>
             <section className="dummy">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas pharetra ligula ligula, eu faucibus sapien suscipit
-                    sed. Ut ut maximus risus, et ornare enim. Quisque interdum,
-                    quam sit amet bibendum aliquam, leo tellus malesuada tortor,
-                    in consectetur nunc est in nisl. Quisque accumsan porta sem
-                    nec volutpat. Quisque dignissim cursus tempor. Pellentesque
-                    in scelerisque tortor, eget posuere leo. Sed vel suscipit
-                    quam. Phasellus ac maximus dui, quis pretium risus.
-                    Suspendisse id hendrerit risus. Nunc dui justo, ultricies at
-                    pellentesque in, scelerisque ac justo. Nunc varius, neque
-                    imperdiet iaculis sagittis, sem ipsum volutpat velit, id
-                    pretium augue nibh ac nibh.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas pharetra ligula ligula, eu faucibus sapien suscipit
-                    sed. Ut ut maximus risus, et ornare enim. Quisque interdum,
-                    quam sit amet bibendum aliquam, leo tellus malesuada tortor,
-                    in consectetur nunc est in nisl. Quisque accumsan porta sem
-                    nec volutpat. Quisque dignissim cursus tempor. Pellentesque
-                    in scelerisque tortor, eget posuere leo. Sed vel suscipit
-                    quam. Phasellus ac maximus dui, quis pretium risus.
-                    Suspendisse id hendrerit risus. Nunc dui justo, ultricies at
-                    pellentesque in, scelerisque ac justo. Nunc varius, neque
-                    imperdiet iaculis sagittis, sem ipsum volutpat velit, id
-                    pretium augue nibh ac nibh.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas pharetra ligula ligula, eu faucibus sapien suscipit
-                    sed. Ut ut maximus risus, et ornare enim. Quisque interdum,
-                    quam sit amet bibendum aliquam, leo tellus malesuada tortor,
-                    in consectetur nunc est in nisl. Quisque accumsan porta sem
-                    nec volutpat. Quisque dignissim cursus tempor. Pellentesque
-                    in scelerisque tortor, eget posuere leo. Sed vel suscipit
-                    quam. Phasellus ac maximus dui, quis pretium risus.
-                    Suspendisse id hendrerit risus. Nunc dui justo, ultricies at
-                    pellentesque in, scelerisque ac justo. Nunc varius, neque
-                    imperdiet iaculis sagittis, sem ipsum volutpat velit, id
-                    pretium augue nibh ac nibh.
-                </p>
+                <strong>THIS WEBSITE IS CURRENTLY UNDER-DEVELOPMENT.</strong>{" "}
             </section>
         </Fragment>
     );

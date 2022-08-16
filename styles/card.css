@@ -1,9 +1,11 @@
 section.experience .card {
     display: flex;
     gap: 10px;
+    /* height: 250px; */
+    margin-bottom: 20px;
 }
 section.experience .card .line {
-    height: 100%;
+    height: inherit;
     width: 5px;
     background-color: black;
 }
@@ -15,6 +17,15 @@ section.experience .card-content {
 }
 section.experience .card-content .description {
     width: 50%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.experience .card-content .description .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 section.experience .card-content .description h2 {
     font-weight: 500;
@@ -29,10 +40,18 @@ section.experience .card-content .description p {
 }
 section.experience .card-content .image {
     width: 50%;
+    height: 100%;
     border-radius: 10px;
+    border: 1px solid #e4e4e4;
+    margin: auto;
 }
 
 @media screen and (max-width: 768px) {
+    section.experience .card {
+        /* height: 500px; */
+    }
+    section.experience .card .line {
+    }
     section.experience .card-content {
         flex-direction: column;
     }

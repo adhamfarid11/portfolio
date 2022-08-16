@@ -361,7 +361,6 @@ section.experience .outer .content {
     display: flex;
     flex-direction: column;
     width: 85%;
-    gap: 15px;
 }
 section.experience .outer .wrapper {
 }
