@@ -24,12 +24,6 @@ export default function ListCommittee() {
         <>
             <div>
                 {datas.map((data) => (
-                    // <
-                    //     key={data.id}
-                    //     id={data.id}
-                    //     title={data.title}
-                    //     detail={data.detail}
-                    // />
                     <>
                         <h1>{data.title}</h1>
                         <h1>{data.detail}</h1>

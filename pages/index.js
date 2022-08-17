@@ -145,7 +145,7 @@ export default function Home() {
             <br></br>
             <br></br>
             <section className="dummy">
-                <strong>THIS WEBSITE IS CURRENTLY UNDER-DEVELOPMENT.</strong>{" "}
+                <strong>THIS WEBSITE IS CURRENTLY UNDER-DEVELOPMENT.</strong>
             </section>
         </Fragment>
     );

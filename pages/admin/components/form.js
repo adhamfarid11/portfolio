@@ -103,7 +103,9 @@ export default function Form(props) {
                     {tech_stacks_list?.map((data) => (
                         <ToggleButton value={data.tech}>
                             <Image
+                            key={data.id}
                                 src={data.link}
+                                alt="tech-stacks"
                                 h="35px"
                                 borderRadius="5px"
                             />
