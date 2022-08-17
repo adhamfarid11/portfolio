@@ -101,9 +101,8 @@ export default function Form(props) {
                     onChange={handleFormat}
                 >
                     {tech_stacks_list?.map((data) => (
-                        <ToggleButton value={data.tech}>
+                        <ToggleButton value={data.tech} key={data.id}>
                             <Image
-                            key={data.id}
                                 src={data.link}
                                 alt="tech-stacks"
                                 h="35px"
