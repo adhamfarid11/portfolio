@@ -7,6 +7,8 @@ import ListProjectMain from "./components/list-project";
 import ListWorksMain from "./components/list-works";
 import ListCommitteeMain from "./components/list-committee";
 
+import { motion } from "framer-motion";
+
 export default function Home() {
     const data = [
         {
@@ -36,10 +38,69 @@ export default function Home() {
             <section className="hero-wrapper">
                 <div className="hero">
                     <div className="upper">
-                        <h2>HI, THERE!</h2>
-                        <p>I&apos;m a student at Universitas Indonesia,</p>
-                        <p>who is extremely determined to learn</p>
-                        <div className="wrapper">
+                        <motion.h2
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.3,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
+                            variants={{
+                                visible: { opacity: 1, y: 0 },
+                                hidden: { opacity: 0, y: 50 },
+                            }}
+                        >
+                            HI, THERE!
+                        </motion.h2>
+                        <motion.p
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.5,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
+                            variants={{
+                                visible: { opacity: 1, y: 0 },
+                                hidden: { opacity: 0, y: 50 },
+                            }}
+                        >
+                            I&apos;m a student at Universitas Indonesia,
+                        </motion.p>
+                        <motion.p
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.5,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
+                            variants={{
+                                visible: { opacity: 1, y: 0 },
+                                hidden: { opacity: 0, y: 50 },
+                            }}
+                        >
+                            who is extremely determined to learn
+                        </motion.p>
+                        <motion.div
+                            className="wrapper"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.5,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
+                            variants={{
+                                visible: { opacity: 1, y: 0 },
+                                hidden: { opacity: 0, y: 50 },
+                            }}
+                        >
                             <p>new things related to</p>
                             <div className="words">
                                 <span>Creative Dev.</span>
@@ -48,26 +109,68 @@ export default function Home() {
                                 <span>Design.</span>
                                 <span>Creative Dev.</span>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="mid"></div>
-                    <div className="lower">
+                    <motion.div
+                        className="lower"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.7,
+                            ease: [0, 0.71, 0.2, 1.01],
+                        }}
+                        variants={{
+                            visible: { opacity: 1, y: 0 },
+                            hidden: { opacity: 0, y: 50 },
+                        }}
+                    >
                         <div className="nama-adham">
                             <h2>ADHAM</h2>
                             <h2>FARID</h2>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             <section className="about-me">
-                <div className="wrapper">
+                <motion.div
+                    className="wrapper"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.7,
+                        ease: [0, 0.71, 0.2, 1.01],
+                    }}
+                    variants={{
+                        visible: { opacity: 1, x: 0 },
+                        hidden: { opacity: 0, x: -50 },
+                    }}
+                >
                     <div className="wrapper-fixed">
                         <div className="fixed">
                             <p>About Me</p>
                         </div>
                     </div>
-                </div>
-                <div className="content">
+                </motion.div>
+                <motion.div
+                    className="content"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.7,
+                        ease: [0, 0.71, 0.2, 1.01],
+                    }}
+                    variants={{
+                        visible: { opacity: 1, x: 0 },
+                        hidden: { opacity: 0, x: 50 },
+                    }}
+                >
                     <p className="upper">
                         A HARD-WORKER, A SELF-TAUGHT PERSON, AND A CRITICAL
                         THINKER. I LOVE TO SURF THE INTERNET AND EXPLORE NEW
@@ -84,7 +187,7 @@ export default function Home() {
                         I&apos;m either watching sports, playing football, or
                         listening to delightful music.
                     </p>
-                </div>
+                </motion.div>
             </section>
             <section className="experience">
                 <h2 className="h2-title">EXPERIENCE</h2>

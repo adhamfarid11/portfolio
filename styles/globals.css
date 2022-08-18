@@ -211,7 +211,8 @@ section.hero-wrapper {
 .hero {
     /* height: calc(100vh - 100px); */
     width: 100%;
-    height: 90vh;
+    height: 95vh;
+    /* awalnya 90vh */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

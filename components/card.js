@@ -71,9 +71,14 @@ function Card(props) {
                             h="100%"
                         />
 
-                        <div className={`cover ${isHover ? "hovered" : ""}`}>
-                            Visit www.
-                        </div>
+                        <a href="https://masscocoindo.com">
+                            <div
+                                className={`cover ${isHover ? "hovered" : ""}`}
+                            >
+                                <p>Visit </p>
+                                <p>www.masscocoindo.com</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </motion.div>
