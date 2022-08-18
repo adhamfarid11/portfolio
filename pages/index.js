@@ -98,7 +98,6 @@ export default function Home() {
                     </div>
                     <div className="content">
                         <ListWorksMain />
-                        <SeeMore />
                     </div>
                 </div>
                 <div className="outer">

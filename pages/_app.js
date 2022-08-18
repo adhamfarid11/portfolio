@@ -4,6 +4,8 @@ import "../styles/card.css";
 import "../styles/seeMore.css";
 import "../styles/admin.scss";
 
+import "../styles/hover-cursor.css";
+
 import myLogo from "../public/Logo.svg";
 import { Fragment, useState, useEffect } from "react";
 import Head from "next/head";

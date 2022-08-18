@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
 import { db } from "../../firebase";
-import { collection, onSnapshot, orderBy, query } from "@firebase/firestore";
+import {
+    collection,
+    onSnapshot,
+    orderBy,
+    query,
+    startAt,
+} from "@firebase/firestore";
 import Card from "../../components/card";
+import SeeMore from "../../components/button/see-more";
 
 export default function ListWorksMain() {
     const [datas, setDatas] = useState([]);
+    var counter = 2;
+    let newData = [];
 
     useEffect(() => {
         const collectionRef = collection(db, "works");
@@ -17,20 +26,24 @@ export default function ListWorksMain() {
                 }))
             );
         });
-        console.log(datas);
         return unsubscribe;
     }, []);
+
+    function seeMore() {
+        newData = datas.slice(0, counter);
+        console.log(newData);
+        counter += 2;
+        console.log("masuk");
+        return () => {
+            newData;
+        };
+    }
 
     return (
         <>
             <div>
+                {console.log("baru" + counter)}
                 {datas.map((data) => (
-                    // <
-                    //     key={data.id}
-                    //     id={data.id}
-                    //     title={data.title}
-                    //     detail={data.detail}
-                    // />
                     <>
                         <Card
                             key={data.id}
@@ -43,6 +56,8 @@ export default function ListWorksMain() {
                     </>
                 ))}
             </div>
+            {/* <button onClick={() => seeMore()}>See more</button> */}
+            <SeeMore onClick={() => seeMore()} />
         </>
     );
 }
