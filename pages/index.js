@@ -26,6 +26,16 @@ export default function Home() {
             image: "https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png",
         },
     ];
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: {
+            delay: 0.5
+          }
+        }
+    }
     return (
         <Fragment>
             <Head>

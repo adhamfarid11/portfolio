@@ -12,7 +12,8 @@ import SeeMore from "../../components/button/see-more";
 
 export default function ListWorksMain() {
     const [datas, setDatas] = useState([]);
-    var counter = 2;
+    const [counter, setCounter] = useState(2);
+    // var counter = 2;
     let newData = [];
 
     useEffect(() => {
@@ -29,21 +30,17 @@ export default function ListWorksMain() {
         return unsubscribe;
     }, []);
 
+    
+
+    
     function seeMore() {
-        newData = datas.slice(0, counter);
-        console.log(newData);
-        counter += 2;
-        console.log("masuk");
-        return () => {
-            newData;
-        };
+        setCounter(counter + 2);
     }
 
     return (
         <>
             <div>
-                {console.log("baru" + counter)}
-                {datas.map((data) => (
+                {datas.slice(0, counter).map((data) => (
                     <>
                         <Card
                             key={data.id}
@@ -56,8 +53,11 @@ export default function ListWorksMain() {
                     </>
                 ))}
             </div>
-            {/* <button onClick={() => seeMore()}>See more</button> */}
-            <SeeMore onClick={() => seeMore()} />
+
+            <button className="see-more" onClick={() => seeMore()}>
+                <p>See</p>
+                <p>More</p>
+            </button>
         </>
     );
 }

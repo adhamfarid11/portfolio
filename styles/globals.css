@@ -8,6 +8,7 @@ a {
     --adham-farid-text: clamp(2em, 7vw, 6em);
 
     --navbar-text: clamp(1em, 2vw, 1.2em);
+    --footer-text: clamp(0.5em, 2vw, 1.2em);
     --p-text-big: clamp(0.9em, 2vw, 2em);
     --p-text-title: clamp(1.1em, 2vw, 2em);
     --p-text-about: clamp(0.9em, 1.7vw, 1.8em);
@@ -18,7 +19,7 @@ a {
 }
 
 body {
-    background-color: white;
+    background-color: #FAF9F6;
 }
 
 * {
@@ -36,6 +37,7 @@ body {
     transition: all 0.8s ease;
     color: white;
     mix-blend-mode: difference;
+    z-index: 5;
 }
 .nav.sticky {
     height: 60px;

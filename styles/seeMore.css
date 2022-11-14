@@ -7,10 +7,15 @@
     background-color: black;
     color: white;
     border-radius: 50px;
+    border:0;
     width: clamp(40px, 5vw, 50px);
     height: clamp(40px, 5vw, 50px);
     font-size: clamp(0.5em, 3vw, 0.7em);
     text-align: center;
     padding: 1em;
     line-height: clamp(10px, 2vw, 15px);
+    cursor: pointer;
+}
+.see-more:hover {
+    background-color: rgb(50, 50, 50);
 }

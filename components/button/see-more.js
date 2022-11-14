@@ -1,10 +1,10 @@
 function SeeMore(props) {
     return (
         <>
-            <div className="see-more">
+            <button className="see-more" onClick={() => props.function}>
                 <p>See</p>
                 <p>More</p>
-            </div>
+            </button>
         </>
     );
 }

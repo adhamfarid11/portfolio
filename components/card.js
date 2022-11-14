@@ -14,7 +14,7 @@ function handleTechStack(dataTechStack) {
                             alt="alt-image"
                             src={data.link}
                             h="30px"
-                            borderRadius="5px"
+                            borderRadius="15%"
                             marginRight="10px"
                         />
                     </>
