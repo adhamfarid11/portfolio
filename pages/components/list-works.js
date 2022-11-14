@@ -30,9 +30,6 @@ export default function ListWorksMain() {
         return unsubscribe;
     }, []);
 
-    
-
-    
     function seeMore() {
         setCounter(counter + 2);
     }
@@ -49,6 +46,7 @@ export default function ListWorksMain() {
                             desc={data.desc}
                             image={data.image}
                             tech_stack={data.tech_stack}
+                            url_website={data.url_website}
                         />
                     </>
                 ))}

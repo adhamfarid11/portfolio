@@ -19,7 +19,7 @@ a {
 }
 
 body {
-    background-color: #FAF9F6;
+    background-color: #faf9f6;
 }
 
 * {
@@ -239,34 +239,34 @@ section.hero-wrapper {
 .hero .upper .wrapper .words span {
     font-size: var(--p-text-big);
     font-weight: 500;
-    line-height: 1.2em;
+    line-height: 1.1em;
     height: 100%;
     display: block;
     padding-left: clamp(0.3em, 0.5vw, 0.8em);
-    animation: spin_words 6s infinite;
+    animation: spin_words_cover 5s infinite;
     /* background: url("../asset/underline.png") no-repeat bottom; */
 }
-@keyframes spin_words {
+@keyframes spin_words_cover {
     10% {
-        transform: translateY(-107%);
+        transform: translateY(-104%);
     }
     25% {
         transform: translateY(-100%);
     }
     35% {
-        transform: translateY(-207%);
+        transform: translateY(-204%);
     }
     50% {
         transform: translateY(-200%);
     }
     60% {
-        transform: translateY(-307%);
+        transform: translateY(-304%);
     }
     75% {
         transform: translateY(-300%);
     }
     85% {
-        transform: translateY(-407%);
+        transform: translateY(-404%);
     }
     100% {
         transform: translateY(-400%);

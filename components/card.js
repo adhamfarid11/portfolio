@@ -64,19 +64,21 @@ function Card(props) {
                         onMouseEnter={() => setIsHover(true)}
                         onMouseLeave={() => setIsHover(false)}
                     >
-                        <Image
-                            alt="alt-image"
-                            src={props.image}
-                            w="100%"
-                            h="100%"
-                        />
+                        <a href={"//" + props.url_website}>
+                            <Image
+                                alt="alt-image"
+                                src={props.image}
+                                w="100%"
+                                h="100%"
+                            />
+                        </a>
 
-                        <a href="https://masscocoindo.com">
+                        <a href={"//" + props.url_website}>
                             <div
-                                className={`cover ${isHover ? "hovered" : ""}`}
+                                className={`cover ${isHover ? "" : "hovered"}`}
                             >
                                 <p>Visit </p>
-                                <p>www.masscocoindo.com</p>
+                                <p>{props.url_website}</p>
                             </div>
                         </a>
                     </div>

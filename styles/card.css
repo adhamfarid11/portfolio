@@ -74,7 +74,7 @@ section.experience .card-content .image:hover {
 
 /* cover image hover  */
 .cover {
-    background: rgba(240, 240, 240, 0.65);
+    background: rgba(230, 230, 230, 0.35);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -89,7 +89,7 @@ section.experience .card-content .image:hover {
     align-items: center;
     color: black;
     font-weight: 500;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
 }
 .cover.hovered {
     top: 50%;

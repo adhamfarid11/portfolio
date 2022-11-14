@@ -104,31 +104,77 @@ function MyApp({ Component, pageProps }) {
                 </div>
             </nav>
             <Component {...pageProps} />
-            <div className="footer-form-container">
-                <div className="left">
-                    <p>Got some difficult/impossible ideas in your mind?</p>
-                </div>
-                <div className="right">
-                    <StyledTextField
-                        fullWidth
-                        input="white"
-                        id="outlined-basic"
-                        label="E-Mail"
-                        variant="outlined"
-                    />
-                    <StyledTextField
-                        multiline
-                        fullWidth
-                        rows={3}
-                        input="white"
-                        id="outlined-basic"
-                        label="Message"
-                        variant="outlined"
-                        inputProps={{ style: { color: "white" } }}
-                    />
-                </div>
-            </div>
+
             <footer>
+                <div className="footer-form-container">
+                    <motion.div
+                        className="left"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.3,
+                            ease: [0, 0.71, 0.2, 1.01],
+                        }}
+                        variants={{
+                            visible: { opacity: 1, x: 0 },
+                            hidden: { opacity: 0, x: -50 },
+                        }}
+                    >
+                        <div className="upper">
+                            <p>Got some</p>
+                            <div className="words">
+                                <span>difficult</span>
+                                <span>impossible</span>
+                                <span>undoable</span>
+                                <span>unrealizable</span>
+                                <span>syulit</span>
+                                <span>difficult</span>
+                            </div>
+                        </div>
+                        <p>ideas in your mind?</p>
+                    </motion.div>
+                    <motion.div
+                        className="right"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.3,
+                            ease: [0, 0.71, 0.2, 1.01],
+                        }}
+                        variants={{
+                            visible: { opacity: 1, x: 0 },
+                            hidden: { opacity: 0, x: 50 },
+                        }}
+                    >
+                        <StyledTextField
+                            fullWidth
+                            input="white"
+                            id="outlined-basic"
+                            label="E-Mail"
+                            variant="outlined"
+                            InputLabelProps={{
+                                style: { color: "#fff" },
+                            }}
+                        />
+                        <StyledTextField
+                            multiline
+                            fullWidth
+                            rows={3}
+                            input="white"
+                            id="outlined-basic"
+                            label="Message"
+                            variant="outlined"
+                            inputProps={{ style: { color: "white" } }}
+                            InputLabelProps={{
+                                style: { color: "#fff" },
+                            }}
+                        />
+                    </motion.div>
+                </div>
                 <div className="upper">
                     <motion.span
                         initial="hidden"
