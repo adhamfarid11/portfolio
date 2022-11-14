@@ -186,7 +186,7 @@ function MyApp({ Component, pageProps }) {
                             hidden: { opacity: 0, x: handleMotionValue() },
                         }}
                     >
-                        <p>I won't do it either but let me know</p>
+                        <p>I won&apos;t do it either but let me know</p>
                         <StyledTextField
                             fullWidth
                             input="white"
