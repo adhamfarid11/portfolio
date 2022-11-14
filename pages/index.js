@@ -9,33 +9,29 @@ import ListCommitteeMain from "./components/list-committee";
 
 import { motion } from "framer-motion";
 
+import { useWindowSize } from "../hooks/useWindowSize";
+
 export default function Home() {
-    const data = [
-        {
-            id: 1,
-            title: "Frontend Web Developer at MassCoco Indonesia",
-            position: "PART-TIME",
-            description: "test",
-            image: "https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png",
-        },
-        {
-            id: 2,
-            title: "UI/UX Designer at Kaya Creative",
-            position: "CONTRACT",
-            description: "test",
-            image: "https://cdn.discordapp.com/attachments/1000437373240361102/1000437465896714280/Screen_Shot_2022-07-23_at_23.18.24.png",
-        },
-    ];
+    const { width } = useWindowSize();
+    const isMobile = width < 768;
 
     const container = {
         hidden: { opacity: 0 },
         show: {
-          opacity: 1,
-          transition: {
-            delay: 0.5
-          }
+            opacity: 1,
+            transition: {
+                delay: 0.5,
+            },
+        },
+    };
+
+    function handleMotionValue() {
+        if (isMobile) {
+            return 20;
         }
+        return 50;
     }
+
     return (
         <Fragment>
             <Head>
@@ -157,7 +153,7 @@ export default function Home() {
                     }}
                     variants={{
                         visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: -50 },
+                        hidden: { opacity: 0, x: -handleMotionValue() },
                     }}
                 >
                     <div className="wrapper-fixed">
@@ -178,7 +174,7 @@ export default function Home() {
                     }}
                     variants={{
                         visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: 50 },
+                        hidden: { opacity: 0, x: handleMotionValue() },
                     }}
                 >
                     <p className="upper">
@@ -190,7 +186,7 @@ export default function Home() {
                         I LIKE TO SURROUND MY SELF WITH LOTS OF CREATIVE MINDS,
                         AND PEOPLE WITH THE SAME INTEREST AS MINE. RECENTLY I
                         TOOK AS MANY PROJECTS AS I CAN, TO MAKE SURE I
-                        UNDERSTAND THOSE FIELD WELL.
+                        UNDERSTOOD THOSE FIELD WELL.
                     </p>
                     <p className="lower">
                         My hobbies take up a good portion of my leisure time.

@@ -349,7 +349,6 @@ section.about-me .content .lower {
         font-size: var(--p-fixed);
     }
 }
-
 section.experience .outer {
     display: flex;
     justify-content: space-between;

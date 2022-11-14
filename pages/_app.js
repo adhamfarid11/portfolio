@@ -15,11 +15,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
-import { styled, TextField } from "@mui/material";
+import { Button, styled, TextField } from "@mui/material";
+import { ButtonProps } from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+
+import { useWindowSize } from "../hooks/useWindowSize";
 
 function MyApp({ Component, pageProps }) {
     const [navActive, setNavActive] = useState(false);
     const [navSticky, setNavSticky] = useState(false);
+
+    const { width } = useWindowSize();
+    const isMobile = width < 768;
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -33,6 +40,27 @@ function MyApp({ Component, pageProps }) {
             setNavSticky(false);
         }
     };
+
+    function handleMotionValue() {
+        if (isMobile) {
+            return 20;
+        }
+        return 50;
+    }
+
+    function handleMotionVariantsAF() {
+        if (isMobile) {
+            return {
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 5 },
+            };
+        } else {
+            return {
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 50 },
+            };
+        }
+    }
 
     const StyledTextField = styled(TextField)({
         "& label.Mui-focused": {
@@ -56,6 +84,14 @@ function MyApp({ Component, pageProps }) {
             color: "white",
         },
     });
+
+    const ColorButton = styled(Button)(({}) => ({
+        color: "black",
+        backgroundColor: "white",
+        "&:hover": {
+            backgroundColor: "rgb(205, 205, 205)",
+        },
+    }));
 
     return (
         <Fragment>
@@ -119,7 +155,7 @@ function MyApp({ Component, pageProps }) {
                         }}
                         variants={{
                             visible: { opacity: 1, x: 0 },
-                            hidden: { opacity: 0, x: -50 },
+                            hidden: { opacity: 0, x: -handleMotionValue() },
                         }}
                     >
                         <div className="upper">
@@ -147,9 +183,10 @@ function MyApp({ Component, pageProps }) {
                         }}
                         variants={{
                             visible: { opacity: 1, x: 0 },
-                            hidden: { opacity: 0, x: 50 },
+                            hidden: { opacity: 0, x: handleMotionValue() },
                         }}
                     >
+                        <p>I won't do it either but let me know</p>
                         <StyledTextField
                             fullWidth
                             input="white"
@@ -173,6 +210,13 @@ function MyApp({ Component, pageProps }) {
                                 style: { color: "#fff" },
                             }}
                         />
+                        <ColorButton
+                            variant="contained"
+                            color="success"
+                            endIcon={<SendIcon />}
+                        >
+                            spam my mail
+                        </ColorButton>
                     </motion.div>
                 </div>
                 <div className="upper">
@@ -185,10 +229,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.4,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         A
                     </motion.span>
@@ -201,10 +242,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.45,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         D
                     </motion.span>
@@ -217,10 +255,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.5,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         H
                     </motion.span>
@@ -233,10 +268,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.55,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         A
                     </motion.span>
@@ -249,10 +281,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.6,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         M
                     </motion.span>
@@ -265,10 +294,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.65,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         &nbsp;
                     </motion.span>
@@ -281,10 +307,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.7,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         F
                     </motion.span>
@@ -297,10 +320,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.75,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         A
                     </motion.span>
@@ -313,10 +333,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.8,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         R
                     </motion.span>
@@ -329,10 +346,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.85,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         I
                     </motion.span>
@@ -345,10 +359,7 @@ function MyApp({ Component, pageProps }) {
                             delay: 0.9,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        variants={{
-                            visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 100 },
-                        }}
+                        variants={handleMotionVariantsAF()}
                     >
                         D
                     </motion.span>

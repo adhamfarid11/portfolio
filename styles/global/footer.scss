@@ -72,6 +72,9 @@ footer {
             flex-direction: column;
             gap: 10px;
             width: 20em;
+            :nth-child(4) {
+                width: fit-content;
+            }
         }
         @media screen and (max-width: 768px) {
             flex-direction: column;
@@ -91,6 +94,11 @@ footer {
                             text-align: left;
                         }
                     }
+                }
+            }
+            .right {
+                :nth-child(4) {
+                    margin: auto;
                 }
             }
         }

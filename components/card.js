@@ -30,6 +30,7 @@ function Card(props) {
         closed: { y: 100 },
     };
     const [isHover, setIsHover] = useState(false);
+    const [isHovered, setHovered] = useState(false);
     return (
         <>
             <motion.div
@@ -75,7 +76,7 @@ function Card(props) {
 
                         <a href={"//" + props.url_website}>
                             <div
-                                className={`cover ${isHover ? "" : "hovered"}`}
+                                className={`cover ${isHover ? "" : "covered"}`}
                             >
                                 <p>Visit </p>
                                 <p>{props.url_website}</p>
