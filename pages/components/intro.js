@@ -4,7 +4,6 @@ export default function Intro() {
             <div className="image">
                 <object data="loader-af.svg" type="image/svg+xml"></object>
             </div>
-            <p>test</p>
         </div>
     );
 }
