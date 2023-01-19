@@ -1,11 +1,14 @@
 footer {
     background-color: black;
+    background-image: url("https://cdn.discordapp.com/attachments/1000437373240361102/1064897120626290798/Group_68.png");
+    background-size: cover;
+    background-position: center;
     color: #faf9f6;
     .footer-form-container {
         padding-block: 6% 1.5%;
         display: flex;
         justify-content: space-evenly;
-        background-color: black;
+        // background-color: black;
         color: #faf9f6;
         max-width: 1280px;
         width: 90vw;

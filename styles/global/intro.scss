@@ -1,0 +1,20 @@
+.intro {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    background-image: url("https://cdn.discordapp.com/attachments/1000437373240361102/1064897120626290798/Group_68.png");
+    background-size: cover;
+    background-position: center;
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 70vw;
+        height: 100%;
+        object {
+            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(16deg)
+                brightness(103%) contrast(101%);
+        }
+    }
+}

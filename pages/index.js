@@ -10,6 +10,7 @@ import ListCommitteeMain from "./components/list-committee";
 import { motion } from "framer-motion";
 
 import { useWindowSize } from "../hooks/useWindowSize";
+import Loader from "./components/loader";
 
 export default function Home() {
     const { width } = useWindowSize();
@@ -152,13 +153,13 @@ export default function Home() {
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
                     variants={{
-                        visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: -handleMotionValue() },
+                        visible: { opacity: 1, y: 0 },
+                        hidden: { opacity: 0, y: handleMotionValue() },
                     }}
                 >
                     <div className="wrapper-fixed">
                         <div className="fixed">
-                            <p>About Me</p>
+                            <p>ABOUT ME</p>
                         </div>
                     </div>
                 </motion.div>
@@ -173,8 +174,8 @@ export default function Home() {
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
                     variants={{
-                        visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: handleMotionValue() },
+                        visible: { opacity: 1, y: 0 },
+                        hidden: { opacity: 0, y: handleMotionValue() },
                     }}
                 >
                     <p className="upper">
@@ -201,7 +202,7 @@ export default function Home() {
                     <div className="wrapper">
                         <div className="wrapper-fixed">
                             <div className="fixed">
-                                <p className="desktop-only">Works</p>
+                                <p className="desktop-only">WORKS</p>
                             </div>
                         </div>
                     </div>
@@ -213,7 +214,7 @@ export default function Home() {
                     <div className="wrapper">
                         <div className="wrapper-fixed">
                             <div className="fixed">
-                                <p className="desktop-only">Projects</p>
+                                <p className="desktop-only">PROJECTS</p>
                             </div>
                         </div>
                     </div>
@@ -227,7 +228,7 @@ export default function Home() {
                     <div className="wrapper">
                         <div className="wrapper-fixed">
                             <div className="fixed">
-                                <p className="desktop-only">Committee</p>
+                                <p className="desktop-only">COMMITTTE</p>
                             </div>
                         </div>
                     </div>

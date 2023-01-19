@@ -74,7 +74,11 @@ section.experience .card-content .image:hover {
 
 /* cover image hover  covernya nutup dari bawah*/
 .cover {
-    background: rgba(240, 240, 240, 0.8);
+    /* background: rgba(240, 240, 240, 0.8); */
+    background-image: url("https://cdn.discordapp.com/attachments/1000437373240361102/1064894831991738398/white.png");
+    background-size: cover;
+    opacity: 0.95;
+
     position: absolute;
     width: 100%;
     height: 100%;
@@ -88,6 +92,7 @@ section.experience .card-content .image:hover {
     align-items: center;
     color: black;
     font-weight: 500;
+    backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 .cover.covered {

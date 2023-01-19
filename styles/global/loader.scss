@@ -1,0 +1,39 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    .image {
+        width: max(200px, 20vw);
+    }
+    p {
+        margin-top: -20px;
+    }
+
+    // display: flex;
+    // position: relative;
+    // height: 100px;
+    // .top-layer {
+    //     position: absolute;
+    //     z-index: 2;
+    //     width: fit-content;
+    //     height: 100%;
+    // }
+    // .bot-layer {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: 1;
+    //     @keyframes fill-color {
+    //         0% {
+    //             box-shadow: 0 0 inset;
+    //         }
+    //         100% {
+    //             box-shadow: 0 -100px inset;
+    //         }
+    //     }
+    //     animation: fill-color 1.5s linear infinite alternate;
+    // }
+}
