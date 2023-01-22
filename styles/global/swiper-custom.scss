@@ -31,7 +31,7 @@
 .swiper-slide img {
     display: block;
     width: 40vw;
-    height: fit-content;
+    height: 100%;
     @media only screen and (max-width: 768px) {
         width: 100%;
     }

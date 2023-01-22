@@ -31,7 +31,7 @@ export default function CarouselWorks(props) {
             navigation
             navigationTooltips={companyName2}
             navigat
-            sectionsColor={arrayColor}
+            // sectionsColor={arrayColor}
             onLeave={(origin, destination, direction) => {
                 console.log("onLeave event", {
                     origin,
