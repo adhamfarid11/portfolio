@@ -56,6 +56,7 @@ export default function CustomSwiperSection(props) {
                             </div>
                         </div>
                         <Swiper
+                            id={data.id}
                             slidesPerView={"auto"}
                             centeredSlides={true}
                             spaceBetween={isMobile ? 0 : 15}
