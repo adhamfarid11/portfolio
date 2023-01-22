@@ -1,0 +1,68 @@
+.carousel {
+    position: relative;
+    z-index: 1;
+    .section {
+        // general
+        height: 100vh;
+        background-image: url("https://media.discordapp.net/attachments/1000437373240361102/1065993836159045733/5-10.png");
+        background-size: auto 100%;
+        background-position: center;
+        color: white;
+        .overlay-bg {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            // margin-left: -3vw;
+        }
+    }
+    .fp-overflow {
+        display: flex !important;
+        flex-direction: row !important;
+        padding-inline: 3vw;
+        align-items: center;
+        .desc-content {
+            width: 70%;
+            height: fit-content;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .tech-stack {
+                padding: 10px;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.2);
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+                * {
+                    margin: 0;
+                }
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            flex-direction: column !important;
+            gap: 20px;
+            .desc-content {
+                width: 100%;
+
+                text-align: justify;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+// remove watermark
+.fp-watermark {
+    display: none !important;
+}
+.fp-watermark > a {
+    display: none !important;
+}

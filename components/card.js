@@ -53,7 +53,15 @@ function Card(props) {
                     <div className="description">
                         <div className="content">
                             <h2>{props.title}</h2>
-                            <h3>{props.position}</h3>
+                            <div className="position-wrapper">
+                                <h3>
+                                    {props.companyName +
+                                        " (" +
+                                        props.position +
+                                        ")"}
+                                </h3>
+                                <h5>2022 - 2023</h5>
+                            </div>
                             <p>{props.desc}</p>
                         </div>
                         <div className="tech-stack">
@@ -68,7 +76,7 @@ function Card(props) {
                         <a href={"//" + props.url_website}>
                             <Image
                                 alt="alt-image"
-                                src={props.image}
+                                src={props.image[0]}
                                 w="100%"
                                 h="100%"
                             />

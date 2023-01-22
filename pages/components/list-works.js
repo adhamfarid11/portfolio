@@ -33,6 +33,10 @@ export default function ListWorksMain() {
     function seeMore() {
         setCounter(counter + 2);
     }
+    datas.map((data) => {
+        console.log(data.title);
+    });
+    console.log("test di home");
 
     return (
         <>
@@ -42,6 +46,7 @@ export default function ListWorksMain() {
                         <Card
                             key={data.id}
                             title={data.title}
+                            companyName={data.companyName}
                             position={data.contractType}
                             desc={data.desc}
                             image={data.image}

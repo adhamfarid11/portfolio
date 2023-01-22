@@ -21,11 +21,20 @@ section.experience .card-content .description {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2vh;
 }
 section.experience .card-content .description .content {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+section.experience .card-content .description .content .position-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+section.experience .card-content .description .content .position-wrapper * {
+    line-height: 1;
 }
 section.experience .card-content .description h2 {
     font-weight: 500;

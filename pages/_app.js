@@ -7,6 +7,13 @@ import "../styles/global/intro.scss";
 import "../styles/card.css";
 import "../styles/seeMore.css";
 import "../styles/admin.scss";
+import "../styles/carousel.scss";
+import "../styles/global/swiper-custom.scss";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import "../styles/hover-cursor.css";
 
@@ -26,14 +33,24 @@ import Router from "next/router";
 import Loader from "./components/loader";
 import Intro from "./components/intro";
 
-function MyApp({ Component, pageProps }) {
+import { useUserAgent } from "next-useragent";
+import { browserName, browserVersion } from "react-device-detect";
+
+function MyApp({ Component, pageProps }, props) {
     const [navActive, setNavActive] = useState(false);
     const [navSticky, setNavSticky] = useState(false);
 
     const { width } = useWindowSize();
     const isMobile = width < 768;
 
+    const [loading, setLoading] = useState(false);
+    const [isIntroed, setIsIntroed] = useState(true);
+
     useEffect(() => {
+        if (browserName == "Safari") {
+            console.log(browserName);
+            setIsIntroed(false);
+        }
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     });
@@ -101,10 +118,6 @@ function MyApp({ Component, pageProps }) {
         },
     }));
 
-    const [loading, setLoading] = useState(false);
-
-    const [isIntroed, setIsIntroed] = useState(true);
-
     Router.events.on("routeChangeStart", (url) => {
         console.log("Route is changing");
         setLoading(true);
@@ -129,6 +142,7 @@ function MyApp({ Component, pageProps }) {
         <>
             {isIntroed ? (
                 <motion.div
+                    suppressHydrationWarning={true}
                     // initial={{ opacity: 1 }}
                     // animate={{ opacity: 0 }}
                     initial={{ y: 0 }}
@@ -190,12 +204,12 @@ function MyApp({ Component, pageProps }) {
                                             }`}
                                         >
                                             <div className="menu-item">
-                                                <Link href="#">Home</Link>
+                                                <Link href="/">Home</Link>
                                                 <p className="desktop">,</p>
                                             </div>
 
                                             <div className="menu-item">
-                                                <Link href="#">Works</Link>
+                                                <Link href="works">Works</Link>
                                                 <p className="desktop">,</p>
                                             </div>
 
