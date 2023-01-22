@@ -8,6 +8,7 @@ import "../styles/card.css";
 import "../styles/seeMore.css";
 import "../styles/admin.scss";
 import "../styles/carousel.scss";
+import "../styles/contact.scss";
 import "../styles/global/swiper-custom.scss";
 
 // Import Swiper styles
@@ -215,12 +216,14 @@ function MyApp({ Component, pageProps }, props) {
                                             </div>
 
                                             <div className="menu-item">
-                                                <Link href="works">Works</Link>
+                                                <Link href="works/">Works</Link>
                                                 <p className="desktop">,</p>
                                             </div>
 
                                             <div className="menu-item">
-                                                <Link href="#">Contact</Link>
+                                                <Link href="contact/">
+                                                    Contact
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

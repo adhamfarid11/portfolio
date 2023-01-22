@@ -1,0 +1,44 @@
+.section-contact {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media only screen and (min-width: 768px) {
+        .wrapper {
+            position: relative;
+            width: 100%;
+            a {
+                text-decoration: underline;
+                font-size: calc(1.5 * var(--adham-farid-text));
+                line-height: 1;
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    width: 5%;
+                    bottom: 0;
+                    left: -5%;
+                    height: 15px;
+                    background-color: #faf9f6;
+                    transition: 1.2s ease;
+                }
+            }
+        }
+        .hover:hover a:after {
+            left: 105%;
+        }
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        a {
+            text-decoration: underline;
+            font-size: calc(1.5 * var(--adham-farid-text));
+            line-height: 1;
+        }
+    }
+    p {
+        font-size: var(--p-text-title);
+    }
+}

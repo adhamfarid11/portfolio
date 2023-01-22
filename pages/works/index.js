@@ -16,6 +16,7 @@ import {
 
 import Loader from "../components/loader";
 import CarouselWorks from "../components/works/CarouselWorks";
+import Head from "next/head";
 
 export default function Index() {
     const [datas, setDatas] = useState([]);
@@ -56,6 +57,9 @@ export default function Index() {
 
     return (
         <>
+            <Head>
+                <title>Works</title>
+            </Head>
             {isLoading ? (
                 <>
                     <Loader />

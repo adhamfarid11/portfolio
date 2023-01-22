@@ -1,4 +1,5 @@
 import ReactFullpage from "@fullpage/react-fullpage";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import CustomSwiperSection from "./CustomSwiperSection";
 
@@ -32,7 +33,7 @@ export default function CarouselWorks(props) {
             navigationTooltips={companyName2}
             navigat
             // sectionsColor={arrayColor}
-            onLeave={(origin, destination, direction) => {
+            onLeave={(origin, nextIndex, destination, direction) => {
                 console.log("onLeave event", {
                     origin,
                     destination,
