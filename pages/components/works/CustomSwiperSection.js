@@ -33,7 +33,7 @@ export default function CustomSwiperSection(props) {
         <>
             {props?.datas?.length ? (
                 props?.datas?.map((data) => (
-                    <div className={`section`} id={data.id}>
+                    <div className={`section`} key={data.id}>
                         <div className="overlay-bg"></div>
                         <div className="desc-content">
                             <div className="content">
@@ -56,7 +56,7 @@ export default function CustomSwiperSection(props) {
                             </div>
                         </div>
                         <Swiper
-                            id={data.id}
+                            key={data.id}
                             slidesPerView={"auto"}
                             centeredSlides={true}
                             spaceBetween={isMobile ? 0 : 15}
@@ -74,7 +74,7 @@ export default function CustomSwiperSection(props) {
                             }
                         >
                             <SwiperSlide>
-                                <img
+                                <Image
                                     src="https://cdn.discordapp.com/attachments/1000437373240361102/1065896542218764318/image.png"
                                     alt="image website preview"
                                 />
