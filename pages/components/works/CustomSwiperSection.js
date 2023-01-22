@@ -80,25 +80,25 @@ export default function CustomSwiperSection(props) {
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img
+                                <Image
                                     src="https://cdn.discordapp.com/attachments/1000437373240361102/1065896542218764318/image.png"
                                     alt="image website preview"
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img
+                                <Image
                                     src="https://cdn.discordapp.com/attachments/1000437373240361102/1065896542218764318/image.png"
                                     alt="image website preview"
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img
+                                <Image
                                     src="https://cdn.discordapp.com/attachments/1000437373240361102/1065896542218764318/image.png"
                                     alt="image website preview"
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img
+                                <Image
                                     src="https://cdn.discordapp.com/attachments/1000437373240361102/1065896542218764318/image.png"
                                     alt="image website preview"
                                 />
