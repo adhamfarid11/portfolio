@@ -33,7 +33,7 @@ export default function CustomSwiperSection(props) {
         <>
             {props?.datas?.length ? (
                 props?.datas?.map((data) => (
-                    <div className={`section`}>
+                    <div className={`section`} id={data.id}>
                         <div className="overlay-bg"></div>
                         <div className="desc-content">
                             <div className="content">
