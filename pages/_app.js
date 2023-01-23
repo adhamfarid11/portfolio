@@ -17,6 +17,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "../styles/hover-cursor.css";
+import "../styles/cursor-custom.css";
 
 import myLogo from "../public/Logo.svg";
 import { Fragment, useState, useEffect } from "react";

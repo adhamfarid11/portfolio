@@ -13,6 +13,7 @@ import SeeMore from "../../components/button/see-more";
 export default function ListWorksMain() {
     const [datas, setDatas] = useState([]);
     const [counter, setCounter] = useState(2);
+    const [newButton, setNewButton] = useState(false);
     // var counter = 2;
     let newData = [];
 
@@ -32,11 +33,14 @@ export default function ListWorksMain() {
 
     function seeMore() {
         setCounter(counter + 2);
+        if (counter + 2 >= datas.length) {
+            setNewButton(true);
+        }
     }
-    datas.map((data) => {
-        console.log(data.title);
-    });
-    console.log("test di home");
+    // datas.map((data) => {
+    //     console.log(data.title);
+    // });
+    // console.log("test di home");
 
     return (
         <>
@@ -56,11 +60,16 @@ export default function ListWorksMain() {
                     </>
                 ))}
             </div>
-
-            <button className="see-more" onClick={() => seeMore()}>
-                <p>See</p>
-                <p>More</p>
-            </button>
+            {newButton ? (
+                <button className="see-more" onClick={() => seeMore()}>
+                    <p>Visit Works</p>
+                </button>
+            ) : (
+                <button className="see-more" onClick={() => seeMore()}>
+                    <p>See</p>
+                    <p>More</p>
+                </button>
+            )}
         </>
     );
 }

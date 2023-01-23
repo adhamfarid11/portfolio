@@ -1,0 +1,35 @@
+.cursor-custom * {
+    cursor: none;
+}
+.cursor-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #faf9f6;
+}
+
+.title {
+    font-size: 10rem;
+}
+
+.cursor {
+    background-color: #111;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+}
+
+@media only screen and (max-width: 800px) {
+    .cursor-custom * {
+        cursor: pointer;
+    }
+    .cursor {
+        display: none;
+    }
+}
