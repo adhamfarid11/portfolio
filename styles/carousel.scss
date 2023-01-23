@@ -8,10 +8,10 @@
         background-image: url("https://media.discordapp.net/attachments/1000437373240361102/1065993836159045733/5-10.png");
         background-size: auto 100%;
         background-position: center;
-        color: white;
+        color: #1f1f1f;
 
         .overlay-bg {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: #faf9f68c;
             position: absolute;
             width: 100vw;
             height: 100vh;
@@ -53,7 +53,7 @@
             .tech-stack {
                 padding: 10px;
                 border-radius: 5px;
-                background-color: rgba(255, 255, 255, 0.2);
+                background-color: rgba(0, 0, 0, 0.1);
                 width: fit-content;
                 display: flex;
                 align-items: center;

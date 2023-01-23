@@ -9,6 +9,9 @@ import {
 } from "@firebase/firestore";
 import Card from "../../components/card";
 import SeeMore from "../../components/button/see-more";
+import { motion } from "framer-motion";
+import { width } from "@mui/system";
+import Link from "next/link";
 
 export default function ListWorksMain() {
     const [datas, setDatas] = useState([]);
@@ -61,9 +64,20 @@ export default function ListWorksMain() {
                 ))}
             </div>
             {newButton ? (
-                <button className="see-more" onClick={() => seeMore()}>
-                    <p>Visit Works</p>
-                </button>
+                <motion.div
+                    className="see-more visit"
+                    initial={{ width: 0 }}
+                    animate={{ width: 150 }}
+                    transition={{
+                        duration: 1,
+                        type: "spring",
+                        damping: 6,
+                        stiffness: 70,
+                        restDelta: 0.1,
+                    }}
+                >
+                    <Link href="/works">Visit Works</Link>
+                </motion.div>
             ) : (
                 <button className="see-more" onClick={() => seeMore()}>
                     <p>See</p>
