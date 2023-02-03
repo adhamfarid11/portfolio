@@ -81,7 +81,7 @@ function MyApp({ Component, pageProps }, props) {
         } else {
             return {
                 visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 50 },
+                hidden: { opacity: 0, y: 30 },
             };
         }
     }

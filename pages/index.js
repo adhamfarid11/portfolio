@@ -69,7 +69,7 @@ export default function Home() {
                             }}
                             variants={{
                                 visible: { opacity: 1, y: 0 },
-                                hidden: { opacity: 0, y: 50 },
+                                hidden: { opacity: 0, y: 30 },
                             }}
                         >
                             HI, THERE!
@@ -85,7 +85,7 @@ export default function Home() {
                             }}
                             variants={{
                                 visible: { opacity: 1, y: 0 },
-                                hidden: { opacity: 0, y: 50 },
+                                hidden: { opacity: 0, y: 30 },
                             }}
                         >
                             I&apos;m a student at Universitas Indonesia,
@@ -101,7 +101,7 @@ export default function Home() {
                             }}
                             variants={{
                                 visible: { opacity: 1, y: 0 },
-                                hidden: { opacity: 0, y: 50 },
+                                hidden: { opacity: 0, y: 30 },
                             }}
                         >
                             who is extremely determined to learn
@@ -118,7 +118,7 @@ export default function Home() {
                             }}
                             variants={{
                                 visible: { opacity: 1, y: 0 },
-                                hidden: { opacity: 0, y: 50 },
+                                hidden: { opacity: 0, y: 30 },
                             }}
                         >
                             <p>new things related to</p>
@@ -144,7 +144,7 @@ export default function Home() {
                         }}
                         variants={{
                             visible: { opacity: 1, y: 0 },
-                            hidden: { opacity: 0, y: 50 },
+                            hidden: { opacity: 0, y: 30 },
                         }}
                     >
                         <div className="nama-adham">
@@ -207,13 +207,18 @@ export default function Home() {
                         I&apos;m either watching sports, playing football, or
                         listening to delightful music.
                     </p>
-                    <ColorButton
-                        variant="contained"
-                        color="success"
-                        endIcon={<DownloadIcon />}
+                    <a
+                        href="resume/Adham Muhammad Farid-resume.pdf"
+                        download="Adham Muhammad Farid-resume"
                     >
-                        Download Resume
-                    </ColorButton>
+                        <ColorButton
+                            variant="contained"
+                            color="success"
+                            endIcon={<DownloadIcon />}
+                        >
+                            Download Resume
+                        </ColorButton>
+                    </a>
                 </motion.div>
             </section>
             <section className="experience">
