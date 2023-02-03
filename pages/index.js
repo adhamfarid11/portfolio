@@ -12,6 +12,9 @@ import { motion } from "framer-motion";
 import { useWindowSize } from "../hooks/useWindowSize";
 import Loader from "./components/loader";
 
+import DownloadIcon from "@mui/icons-material/Download";
+import { Button, styled, TextField } from "@mui/material";
+
 export default function Home() {
     const { width } = useWindowSize();
     const isMobile = width < 768;
@@ -32,6 +35,16 @@ export default function Home() {
         }
         return 50;
     }
+
+    const ColorButton = styled(Button)(({}) => ({
+        color: "white",
+        backgroundColor: "black",
+        boxShadow: "none",
+        "&:hover": {
+            backgroundColor: "rgb(60, 60, 60)",
+            boxShadow: "none",
+        },
+    }));
 
     return (
         <Fragment>
@@ -194,6 +207,13 @@ export default function Home() {
                         I&apos;m either watching sports, playing football, or
                         listening to delightful music.
                     </p>
+                    <ColorButton
+                        variant="contained"
+                        color="success"
+                        endIcon={<DownloadIcon />}
+                    >
+                        Download Resume
+                    </ColorButton>
                 </motion.div>
             </section>
             <section className="experience">
