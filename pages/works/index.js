@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+"use client";
+
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 
@@ -17,6 +19,8 @@ import {
 import Loader from "../components/loader";
 import CarouselWorks from "../components/works/CarouselWorks";
 import Head from "next/head";
+
+import WorkSection from "../components/works/WorkSection";
 
 export default function Index() {
     const [datas, setDatas] = useState([]);
@@ -66,7 +70,10 @@ export default function Index() {
                 </>
             ) : (
                 <>
-                    <CarouselWorks datas={datas} />
+                    {/* <CarouselWorks datas={datas} /> */}
+                    <WorkSection />
+                    <WorkSection />
+                    <WorkSection />
                 </>
             )}
         </>

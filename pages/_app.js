@@ -10,6 +10,7 @@ import "../styles/admin.scss";
 import "../styles/carousel.scss";
 import "../styles/contact.scss";
 import "../styles/global/swiper-custom.scss";
+import "../styles/components/workSectionCard.scss";
 
 // Import Swiper styles
 import "swiper/css";
@@ -217,12 +218,14 @@ function MyApp({ Component, pageProps }, props) {
                                             </div>
 
                                             <div className="menu-item">
-                                                <Link href="works/">Works</Link>
+                                                <Link href="/works/">
+                                                    Works
+                                                </Link>
                                                 <p className="desktop">,</p>
                                             </div>
 
                                             <div className="menu-item">
-                                                <Link href="contact/">
+                                                <Link href="/contact/">
                                                     Contact
                                                 </Link>
                                             </div>
@@ -489,8 +492,8 @@ function MyApp({ Component, pageProps }, props) {
                                             </div>
                                         </div>
                                         <div className="right">
-                                            <p>Developed by Adham Farid</p>
                                             <p>Designed by Adham Farid</p>
+                                            <p>Developed by Adham Farid</p>
                                         </div>
                                     </div>
                                     <div className="desktop">

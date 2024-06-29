@@ -1,5 +1,6 @@
+"use client";
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import Card from "../components/card";
 import SeeMore from "../components/button/see-more";
 import { Image } from "@chakra-ui/react";
@@ -18,6 +19,14 @@ import { Button, styled, TextField } from "@mui/material";
 export default function Home() {
     const { width } = useWindowSize();
     const isMobile = width < 768;
+
+    useEffect(() => {
+        (async () => {
+            const LocomotiveScroll = (await import("locomotive-scroll"))
+                .default;
+            const locomotiveScroll = new LocomotiveScroll();
+        })();
+    }, []);
 
     const container = {
         hidden: { opacity: 0 },

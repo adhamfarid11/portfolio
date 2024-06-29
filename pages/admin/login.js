@@ -1,4 +1,4 @@
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
 
 import { useState, useEffect } from "react";
 import { Button, Container, Grid, TextField } from "@mui/material";
@@ -14,6 +14,8 @@ import { db } from "../../firebase";
 import { collection, onSnapshot, query } from "@firebase/firestore";
 
 import { doc, getDoc } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function AdminLogin() {
     const [password, setPassword] = useState("");
@@ -42,20 +44,29 @@ export default function AdminLogin() {
         });
         return unsubscribe;
     }, []);
-    // console.log(passwordCode);
-    const handleEnterAsAdmin = () => {
-        // if (password == passwordCode) {
-        //     console.log("mew");
-        // }
-        if (password == "meongmeong") {
-            console.log("mew");
-            Router.push("/admin");
-        }
+
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
+    const [user, loading] = useAuthState(auth);
+
+    const router = useRouter();
+
+    const signIn = async () => {
+        const result = await signInWithPopup(auth, provider);
+        router.push("/admin");
     };
+    var msg = "";
+    if (user) {
+        if (user.email != "adham7x@gmail.com") {
+            msg = "You're not the admin";
+        }
+    }
+
     return (
         <>
             <section className="adminLogin">
-                <pre>{password}</pre>
+                {user ? <pre>{user.email}</pre> : <></>}
+                <pre>{msg}</pre>
                 <h1>Login as Admin</h1>
                 <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">
@@ -89,9 +100,9 @@ export default function AdminLogin() {
                 <Button
                     variant="contained"
                     className="enter-btn"
-                    onClick={handleEnterAsAdmin}
+                    onClick={signIn}
                 >
-                    Enter as Admin
+                    Sign In
                 </Button>
             </section>
         </>

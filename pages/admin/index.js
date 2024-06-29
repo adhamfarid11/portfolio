@@ -17,11 +17,26 @@ import ListProject from "./components/list-project";
 import ListCommittee from "./components/list-committee";
 import ListWorks from "./components/list-works";
 
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 export default function IndexAdmin() {
     const [alignment, setAlignment] = useState("works");
     const [selected, setSelected] = useState(false);
 
     const router = useRouter();
+
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
+    const [user, loading] = useAuthState(auth);
+
+    if (user) {
+        if (user.email == "adham7x@gmail.com") {
+            console.log("masuk");
+        } else {
+            router.push("/admin/login");
+        }
+    }
 
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
