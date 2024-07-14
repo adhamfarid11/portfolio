@@ -1,6 +1,8 @@
-import { Image } from "@chakra-ui/react";
+import Image from "next/image";
+import { Image as ImageChakra } from "@chakra-ui/react";
 import { useState } from "react";
 import { tech_stacks_list } from "../data/tech_stack";
+import myLogo from "../public/Logo.svg";
 
 import { motion } from "framer-motion";
 
@@ -10,7 +12,7 @@ function handleTechStack(dataTechStack) {
             if (tech.toString() === data.tech.toString()) {
                 return (
                     <>
-                        <Image
+                        <ImageChakra
                             alt="alt-image"
                             src={data.link}
                             h="30px"
@@ -73,12 +75,22 @@ function Card(props) {
                         onMouseEnter={() => setIsHover(true)}
                         onMouseLeave={() => setIsHover(false)}
                     >
-                        <a href={"//" + props.url_website}>
-                            <Image
+                        <a
+                            href={"//" + props.url_website}
+                            className="web-content-image"
+                        >
+                            {/* <Image
                                 alt="alt-image"
                                 src={props.image[0]}
                                 w="100%"
                                 h="100%"
+                            /> */}
+                            <Image
+                                alt="Adham Farid Logo"
+                                width="100%"
+                                height="100%"
+                                src={myLogo}
+                                objectFit="fit"
                             />
                         </a>
 

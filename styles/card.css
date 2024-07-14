@@ -1,7 +1,7 @@
 section.experience .card {
     display: flex;
     gap: 10px;
-    /* height: 250px; */
+    height: 250px;
     margin-bottom: 20px;
 }
 section.experience .card .line {
@@ -11,9 +11,10 @@ section.experience .card .line {
 }
 
 section.experience .card-content {
-    height: 100%;
+    width: 100%;
     display: flex;
     gap: 10px;
+    justify-content: space-between;
 }
 section.experience .card-content .description {
     width: 50%;
@@ -48,7 +49,7 @@ section.experience .card-content .description p {
     text-align: justify;
 }
 section.experience .card-content .description .tech-stack > * {
-    height: clamp(15px, 2vw, 25px);
+    height: clamp(15px, 2vw, 25px) !important;
 }
 section.experience .card-content .image {
     width: 50%;
@@ -82,6 +83,14 @@ section.experience .card-content .image:hover {
     }
 }
 
+.web-content-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: difference;
+}
 /* cover image hover  covernya nutup dari bawah*/
 .cover {
     /* background: rgba(240, 240, 240, 0.8); */
