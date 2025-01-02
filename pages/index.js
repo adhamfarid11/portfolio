@@ -27,7 +27,15 @@ export default function Home() {
             <HomeHero />
             <HomeAboutMe />
             <HomeExperience />
-            <section className="dummy">
+            <section
+                className="dummy"
+                style={{
+                    display: "flex",
+                    width: "100%",
+                    justifyContent: "center",
+                    paddingBlock: "300px",
+                }}
+            >
                 <strong>THIS WEBSITE IS CURRENTLY UNDER-DEVELOPMENT.</strong>
             </section>
         </Fragment>

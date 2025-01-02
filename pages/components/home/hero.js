@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { LinearGradient } from "react-text-gradients";
 
 export default function HomeHero() {
     return (
@@ -95,8 +96,23 @@ export default function HomeHero() {
                     }}
                 >
                     <div className="nama-adham">
-                        <h2>ADHAM</h2>
-                        <h2>FARID</h2>
+                        <h2>
+                            <LinearGradient
+                                gradient={["to left", "#00aeef ,#2d388a"]}
+                            >
+                                ADHAM
+                            </LinearGradient>
+                        </h2>
+                        <h2>
+                            <LinearGradient
+                                gradient={[
+                                    "to left",
+                                    "#00aeef 15%,#2d388a 120%",
+                                ]}
+                            >
+                                FARID
+                            </LinearGradient>
+                        </h2>
                     </div>
                 </motion.div>
             </div>
