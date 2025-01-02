@@ -36,7 +36,7 @@ export default function HomeHero() {
                             hidden: { opacity: 0, y: 30 },
                         }}
                     >
-                        I&apos;m a student at Universitas Indonesia,
+                        I&apos;m a fresh graduate from Universitas Indonesia,
                     </motion.p>
                     <motion.p
                         initial="hidden"

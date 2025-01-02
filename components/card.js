@@ -26,13 +26,33 @@ function handleTechStack(dataTechStack) {
     );
 }
 
-function Card(props) {
-    const variantsHover = {
-        open: { y: 0 },
-        closed: { y: 100 },
-    };
+function handleYear(year_start, year_end) {
+    if (!year_end) {
+        year_end = "Present";
+    }
+
+    if (!year_start) {
+        return <h5>{year_end}</h5>;
+    }
+
+    return (
+        <h5>
+            {year_start} - {year_end}
+        </h5>
+    );
+}
+
+function Card({
+    title,
+    companyName,
+    position,
+    desc,
+    tech_stack,
+    url_website,
+    year_start,
+    year_end,
+}) {
     const [isHover, setIsHover] = useState(false);
-    const [isHovered, setHovered] = useState(false);
     return (
         <>
             <motion.div
@@ -54,20 +74,15 @@ function Card(props) {
                 <div className="card-content">
                     <div className="description">
                         <div className="content">
-                            <h2>{props.title}</h2>
+                            <h2>{title}</h2>
                             <div className="position-wrapper">
-                                <h3>
-                                    {props.companyName +
-                                        " (" +
-                                        props.position +
-                                        ")"}
-                                </h3>
-                                <h5>2022 - 2023</h5>
+                                <h3>{companyName + " (" + position + ")"}</h3>
+                                {handleYear(year_start, year_end)}
                             </div>
-                            <p>{props.desc}</p>
+                            <p>{desc}</p>
                         </div>
                         <div className="tech-stack">
-                            {handleTechStack(props.tech_stack)}
+                            {handleTechStack(tech_stack)}
                         </div>
                     </div>
                     <div
@@ -76,15 +91,9 @@ function Card(props) {
                         onMouseLeave={() => setIsHover(false)}
                     >
                         <a
-                            href={"//" + props.url_website}
+                            href={"//" + url_website}
                             className="web-content-image"
                         >
-                            {/* <Image
-                                alt="alt-image"
-                                src={props.image[0]}
-                                w="100%"
-                                h="100%"
-                            /> */}
                             <Image
                                 alt="Adham Farid Logo"
                                 width="100%"
@@ -94,12 +103,12 @@ function Card(props) {
                             />
                         </a>
 
-                        <a href={"//" + props.url_website}>
+                        <a href={"//" + url_website}>
                             <div
                                 className={`cover ${isHover ? "" : "covered"}`}
                             >
                                 <p>Visit </p>
-                                <p>{props.url_website}</p>
+                                <p>{url_website}</p>
                             </div>
                         </a>
                     </div>

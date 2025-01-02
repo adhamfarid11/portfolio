@@ -17,7 +17,7 @@ section.experience .card-content {
     justify-content: space-between;
 }
 section.experience .card-content .description {
-    width: 50%;
+    width: 70%;
     /* height: 100%; */
     display: flex;
     flex-direction: column;
@@ -52,12 +52,11 @@ section.experience .card-content .description .tech-stack > * {
     height: clamp(15px, 2vw, 25px) !important;
 }
 section.experience .card-content .image {
-    width: 50%;
     height: 100%;
+    aspect-ratio: 1/1;
     border-radius: 10px;
     border: 1px solid #e4e4e4;
     border: 1px solid #cccccc;
-    margin: auto;
     position: relative;
     overflow: hidden;
 }
@@ -67,7 +66,7 @@ section.experience .card-content .image:hover {
 
 @media screen and (max-width: 768px) {
     section.experience .card {
-        /* height: 500px; */
+        height: unset;
     }
     section.experience .card .line {
     }

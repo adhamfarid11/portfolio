@@ -21,7 +21,7 @@ export default function Home() {
                 <title>Adham Farid | Portfolio</title>
                 <meta
                     name="description"
-                    content="Hi There! I'm Adham Farid and I'm a student majoring Information System at Universitas Indonesia who is extremely determined to learn new things related to business and computer. "
+                    content="Hi There! I'm Adham Farid and I'm a fresh graduate from Information System at Universitas Indonesia who is extremely determined to learn new things related to business and computer. "
                 />
             </Head>
             <HomeHero />
