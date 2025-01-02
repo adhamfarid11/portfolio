@@ -40,10 +40,6 @@ export default function ListWorksMain() {
             setNewButton(true);
         }
     }
-    // datas.map((data) => {
-    //     console.log(data.title);
-    // });
-    // console.log("test di home");
 
     return (
         <>

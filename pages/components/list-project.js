@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { db } from "../../firebase";
-import { collection, onSnapshot, orderBy, query } from "@firebase/firestore";
+import { collection, onSnapshot, query } from "@firebase/firestore";
 import Card from "../../components/card";
 
 export default function ListProjectMain() {
@@ -22,27 +22,19 @@ export default function ListProjectMain() {
     }, []);
 
     return (
-        <>
-            <div>
-                {datas.map((data) => (
-                    // <
-                    //     key={data.id}
-                    //     id={data.id}
-                    //     title={data.title}
-                    //     detail={data.detail}
-                    // />
-                    <>
-                        <Card
-                            key={data.id}
-                            title={data.title}
-                            position={data.contractType}
-                            desc={data.desc}
-                            image={data.image}
-                            tech_stack={data.tech_stack}
-                        />
-                    </>
-                ))}
-            </div>
-        </>
+        <div>
+            {datas.map((data) => (
+                <>
+                    <Card
+                        key={data.id}
+                        title={data.title}
+                        position={data.contractType}
+                        desc={data.desc}
+                        image={data.image}
+                        tech_stack={data.tech_stack}
+                    />
+                </>
+            ))}
+        </div>
     );
 }

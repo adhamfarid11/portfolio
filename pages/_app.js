@@ -137,17 +137,10 @@ function MyApp({ Component, pageProps }, props) {
     }
 
     return (
-        // <motion.div>
-        //     {console.log("masuk apa" + isIntroed)}
-        //     <Intro />
-        //     {introTimeout()}
-        // </motion.div>
         <>
             {isIntroed ? (
                 <motion.div
                     suppressHydrationWarning={true}
-                    // initial={{ opacity: 1 }}
-                    // animate={{ opacity: 0 }}
                     initial={{ y: 0 }}
                     animate={{ y: "-100vh" }}
                     transition={{ delay: 2, ease: "easeIn", duration: 1 }}
@@ -470,7 +463,15 @@ function MyApp({ Component, pageProps }, props) {
                                     </div>
                                     <div className="lower">
                                         <div className="left">
-                                            <p>Not yet a Software Engineer</p>
+                                            <p>
+                                                <strike
+                                                    style={{ color: "grey" }}
+                                                >
+                                                    Not yet a
+                                                </strike>{" "}
+                                                Software Engineer @ Bank Syariah
+                                                Indonesia
+                                            </p>
                                         </div>
                                         <div className="mid">
                                             <div className="menu-item">
