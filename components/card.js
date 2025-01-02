@@ -47,12 +47,12 @@ function Card({
     companyName,
     position,
     desc,
+    image_url,
     tech_stack,
-    url_website,
     year_start,
     year_end,
 }) {
-    const [isHover, setIsHover] = useState(false);
+    console.log(image_url);
     return (
         <>
             <motion.div
@@ -85,32 +85,25 @@ function Card({
                             {handleTechStack(tech_stack)}
                         </div>
                     </div>
-                    <div
-                        className="image"
-                        onMouseEnter={() => setIsHover(true)}
-                        onMouseLeave={() => setIsHover(false)}
-                    >
-                        <a
-                            href={"//" + url_website}
-                            className="web-content-image"
-                        >
+                    <div className="image">
+                        {image_url ? (
                             <Image
                                 alt="Adham Farid Logo"
-                                width="100%"
-                                height="100%"
-                                src={myLogo}
+                                layout="fill"
+                                src={image_url}
                                 objectFit="fit"
                             />
-                        </a>
-
-                        <a href={"//" + url_website}>
-                            <div
-                                className={`cover ${isHover ? "" : "covered"}`}
-                            >
-                                <p>Visit </p>
-                                <p>{url_website}</p>
-                            </div>
-                        </a>
+                        ) : (
+                            <a className="web-content-image">
+                                <Image
+                                    alt="Adham Farid Logo"
+                                    width="100%"
+                                    height="100%"
+                                    src={myLogo}
+                                    objectFit="fit"
+                                />
+                            </a>
+                        )}
                     </div>
                 </div>
             </motion.div>

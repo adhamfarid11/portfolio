@@ -35,8 +35,8 @@ export default function ListWorksMain() {
                     companyName={data.companyName}
                     position={data.contractType}
                     desc={data.desc}
+                    image_url={data.image_url}
                     tech_stack={data.tech_stack}
-                    url_website={data.url_website}
                     year_start={data.year_start}
                     year_end={data.year_end}
                 />
