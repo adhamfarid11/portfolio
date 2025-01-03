@@ -1,15 +1,15 @@
 export const tech_stacks_list = [
     {
         tech: "wordpress",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1008634949013876868/logos_wordpress.png?ex=669423bf&is=6692d23f&hm=6ad206946b8d233d9ea5ea8c696f682a9f85e92e72b4822542b925572139e868&",
+        link: "https://www.eplusgo.com/wp-content/uploads/2014/02/wordpress.jpg",
     },
     {
         tech: "html",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1008634369704996905/logos_html-5.png?ex=66942335&is=6692d1b5&hm=ef36192f07a1d938f7df548ce7badd35d400a4ab57e192406d5b6510cfcd7a3f&",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png",
     },
     {
         tech: "css",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1008634368924852265/logos_css-3.png?ex=66942335&is=6692d1b5&hm=1b8dd3f2d412d2fc9ae4d1d3baa65b83eb3f9d693cc34baf3b1b16c11e9f5db4&",
+        link: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
     },
     {
         tech: "js",
@@ -17,30 +17,58 @@ export const tech_stacks_list = [
     },
     {
         tech: "ts",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1008634371839901736/vscode-icons_file-type-typescript-official.png?ex=66942335&is=6692d1b5&hm=92438f51d953efb7e683a0d265f5100a1bcc1cf3dfd63bff2c77411d32b5b83f&",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
     },
     {
         tech: "react",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1008634371445629039/vscode-icons_file-type-reactjs.png?ex=66942335&is=6692d1b5&hm=86fa80341373257658db2145cd52a6a898168aee55b0013edb709aaf7f76f962&",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png",
     },
     {
         tech: "next",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1008634371089117214/logos_nextjs.png?ex=66942335&is=6692d1b5&hm=51452979233e3df969402caa3ebc376348a6007db2b4241e7b8dc8b5025803ba&",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1280px-Nextjs-logo.svg.png",
     },
     {
         tech: "django",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1009014769153491034/django_2.png?ex=669433fb&is=6692e27b&hm=861a0774316d0af7cecd2e703384703ec9ebaa4567af3c96395327a0e67517bd&",
+        link: "https://theclevercompany.se/media/blog/article/image/1565645489-django-logo.gif.0x760_q85.jpg",
     },
     {
         tech: "sass",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1008634948544122910/logos_sass.png?ex=669423bf&is=6692d23f&hm=3decbeb5c1a2cab4237ee0e5122bc0dfc0bb4445f7284083f5f61ae5f409db3d&",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/800px-Sass_Logo_Color.svg.png",
     },
     {
         tech: "tailwind",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1009015315142807602/tailwind.png?ex=6694347d&is=6692e2fd&hm=02d92ea241e1d4ad772b6fc979377464bb8e1b1b516720a017f87e142caea05e&",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
     },
     {
         tech: "figma",
-        link: "https://cdn.discordapp.com/attachments/1000437373240361102/1008634369289764885/logos_figma.png?ex=66942335&is=6692d1b5&hm=7cc16ebe0d91766888fb1c9a3f19977e1261e0c2aa9c2421b5615c86e3b095f4&",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png",
+    },
+    {
+        tech: "golang",
+        link: "https://www.techasoft.com/blog/2019/12/1576592374.png",
+    },
+    {
+        tech: "postgres",
+        link: "https://tutorlokal.com/wp-content/uploads/2018/08/psql-logo.png",
+    },
+    {
+        tech: "kotlin",
+        link: "https://kotlinlang.org/docs/images/kotlin-logo.png",
+    },
+    {
+        tech: "jetpack-compose",
+        link: "https://androiddeepdive.github.io/Team-Blog/images/cover_jepack_compose.png",
+    },
+    {
+        tech: "nuxt",
+        link: "https://logowik.com/content/uploads/images/nuxt-framework4253.logowik.com.webp",
+    },
+    {
+        tech: "microsoft-sharepoint",
+        link: "https://www.clipartmax.com/png/middle/112-1126943_image-gallery-sharepoint-2015-logo-microsoft-sharepoint-sharepoint-online-logo.png",
+    },
+    {
+        tech: "katalon",
+        link: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Katalon_Studio_logo.png",
     },
 ];
