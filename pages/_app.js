@@ -9,6 +9,7 @@ import "../styles/seeMore.css";
 import "../styles/admin.scss";
 import "../styles/carousel.scss";
 import "../styles/contact.scss";
+import "../styles/theJourney.scss";
 import "../styles/global/swiper-custom.scss";
 import "../styles/components/workSectionCard.scss";
 

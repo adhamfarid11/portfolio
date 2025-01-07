@@ -1,27 +1,15 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState } from "react";
-
-import ReactFullpage from "@fullpage/react-fullpage";
-
-import CustomSwiperSection from "../components/works/CustomSwiperSection";
+import { useEffect, useState } from "react";
 
 import { db } from "../../firebase";
-import {
-    collection,
-    getDocs,
-    onSnapshot,
-    orderBy,
-    query,
-    startAt,
-} from "@firebase/firestore";
+import { collection, getDocs } from "@firebase/firestore";
 
 import Loader from "../components/loader";
-import CarouselWorks from "../components/works/CarouselWorks";
 import Head from "next/head";
 
-import WorkSection from "../components/works/WorkSection";
 import UnderDevelopment from "pages/components/under-development";
+import TheJourney from "pages/components/works/the-journey";
 
 export default function Index() {
     const [datas, setDatas] = useState([]);
@@ -33,12 +21,10 @@ export default function Index() {
         const citiesCol = collection(db, "works");
         const citySnapshot = await getDocs(citiesCol);
         const cityList = citySnapshot.docs.map((doc) => doc.data());
-        // console.log(cityList);
         return cityList;
     }
 
     async function fetchData() {
-        // console.log("fetch data");
         setIsLoading(true);
         try {
             const cityList = await getCities(db);
@@ -63,7 +49,7 @@ export default function Index() {
     return (
         <>
             <Head>
-                <title>Works</title>
+                <title>Adham Farid | Works</title>
             </Head>
             {isLoading ? (
                 <>
@@ -71,7 +57,8 @@ export default function Index() {
                 </>
             ) : (
                 <>
-                    <UnderDevelopment />
+                    <TheJourney />
+                    {/* <UnderDevelopment /> */}
                 </>
             )}
         </>

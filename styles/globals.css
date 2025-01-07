@@ -74,32 +74,19 @@ p {
     width: 100%;
     column-gap: 10px;
 }
-.nav.sticky .center .left {
-}
+
 .nav .center .left .text-logo {
-    /* opacity: 0; */
     transition: 0.8s ease;
-    /* position: absolute; */
     color: white;
     mix-blend-mode: difference;
-}
-.nav.sticky .center .left .text-logo {
-    /* opacity: 1; */
 }
 .nav .center .left .image-logo {
     display: flex;
     align-items: center;
     width: var(--navbar-text);
     height: var(--navbar-text);
-    /* transition: 0.8s ease; */
-    /* position: absolute; */
-    /* margin-left: -100px; */
     color: white;
     z-index: 10;
-}
-.nav .center .left .image-logo {
-    /* filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(226deg)
-        brightness(105%) contrast(102%); */
     mix-blend-mode: difference;
 }
 
