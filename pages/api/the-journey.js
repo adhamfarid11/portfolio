@@ -12,8 +12,8 @@ export default async function handler(req, res) {
     try {
         const { resources } = await cloudinary.search
             .expression("folder:the-journey/*") // Replace 'your-folder-name' with your folder's name
-            .sort_by("public_id", "desc") // Sort images by most recent
-            .max_results(20) // Limit to 20 images
+            .sort_by("public_id", "asc") // Sort images by most recent
+            // .max_results(20) // Limit to 20 images
             .execute();
 
         // Map resources to return only the URLs

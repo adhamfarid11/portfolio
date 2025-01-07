@@ -4,16 +4,20 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 export default function TheJourney() {
     const [images, setImages] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     // Fetch images from the Cloudinary API
     useEffect(() => {
         const fetchImages = async () => {
             try {
+                setLoading(true);
                 const res = await fetch("/api/the-journey");
                 const data = await res.json();
                 setImages(data);
             } catch (error) {
                 console.error("Error fetching images:", error);
+            } finally {
+                setLoading(false);
             }
         };
         fetchImages();
@@ -33,19 +37,23 @@ export default function TheJourney() {
                 }}
             >
                 <Masonry gutter="10px">
-                    {images.map((src, index) => (
-                        <div className="masonry-item" key={index}>
-                            <img
-                                src={src}
-                                alt={`image-${index}`}
-                                style={{
-                                    width: "100%", // Makes the image fill the column
-                                    display: "block", // Removes inline gaps
-                                    borderRadius: "5px", // Optional: Add some styling
-                                }}
-                            />
-                        </div>
-                    ))}
+                    {loading ? (
+                        <h1>Loading</h1>
+                    ) : (
+                        images.map((src, index) => (
+                            <div className="masonry-item" key={index}>
+                                <img
+                                    src={src}
+                                    alt={`image-${index}`}
+                                    style={{
+                                        width: "100%", // Makes the image fill the column
+                                        display: "block", // Removes inline gaps
+                                        borderRadius: "5px", // Optional: Add some styling
+                                    }}
+                                />
+                            </div>
+                        ))
+                    )}
                 </Masonry>
             </ResponsiveMasonry>
         </section>

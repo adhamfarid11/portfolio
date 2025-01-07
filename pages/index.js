@@ -28,7 +28,7 @@ export default function Home() {
             <HomeHero />
             <HomeAboutMe />
             <HomeExperience />
-            <UnderDevelopment />
+            {/* <UnderDevelopment /> */}
         </Fragment>
     );
 }
