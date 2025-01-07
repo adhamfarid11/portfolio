@@ -15,6 +15,7 @@
         "@fullpage/react-fullpage": "^0.1.31",
         "@mui/icons-material": "^5.8.4",
         "@mui/material": "^5.10.0",
+        "caniuse-lite": "^1.0.30001690",
         "core-js": "^3.6.5",
         "firebase": "^9.9.2",
         "firebase-admin": "^11.0.1",
@@ -30,6 +31,7 @@
         "react-dom": "18.2.0",
         "react-firebase-hooks": "^5.1.1",
         "react-locomotive-scroll": "^0.2.2",
+        "react-responsive-masonry": "^2.1.7",
         "react-text-gradients": "^1.0.2",
         "sass": "^1.54.4",
         "swiper": "^8.4.6"
