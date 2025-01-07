@@ -1,13 +1,13 @@
 section.wrapper-the-journey {
     position: relative;
+    padding-top: 80px;
     .the-journey-title {
         position: sticky;
         top: 0;
         width: 100%;
         color: white;
         mix-blend-mode: difference;
-
-        z-index: 5;
+        z-index: 1;
         h2 {
             font-size: var(--adham-farid-text);
         }

@@ -3,12 +3,26 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 export default function TheJourney() {
     const images = [
-        "https://via.placeholder.com/300x300",
-        "https://via.placeholder.com/400x250",
-        "https://via.placeholder.com/350x400",
-        "https://via.placeholder.com/300x500",
-        "https://via.placeholder.com/450x300",
-        "https://plus.unsplash.com/premium_photo-1664303218668-03fa4e612038?q=80&w=3280&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+        "https://images.unsplash.com/photo-1542300057-1705d0217213",
+        "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+        "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df",
+        "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
+        "https://images.unsplash.com/photo-1465146633011-14f8e85f06f2",
+        "https://images.unsplash.com/photo-1527549993586-dff825b37782",
+        "https://images.unsplash.com/photo-1550418290-a8d86ad674cd",
+        "https://images.unsplash.com/photo-1564866657315-3934f1f10cfb",
+        "https://images.unsplash.com/photo-1518081444512-371ec4a18765",
+        "https://images.unsplash.com/photo-1534515722748-df22769c1eb3",
+        "https://images.unsplash.com/photo-1558980664-10b26ac1ab2e",
+        "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe",
+        "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe",
+        "https://images.unsplash.com/photo-1558981403-c5f9891b1e96",
+        "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809",
     ];
 
     return (
