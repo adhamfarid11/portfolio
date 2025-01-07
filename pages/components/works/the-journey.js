@@ -16,7 +16,6 @@ export default function TheJourney() {
                 console.error("Error fetching images:", error);
             }
         };
-
         fetchImages();
     }, []);
 
