@@ -5,6 +5,7 @@ import { Fragment, useEffect } from "react";
 import HomeHero from "./components/home/hero";
 import HomeAboutMe from "./components/home/about-me";
 import HomeExperience from "./components/home/experience";
+import UnderDevelopment from "./components/under-development";
 
 export default function Home() {
     useEffect(() => {
@@ -27,17 +28,7 @@ export default function Home() {
             <HomeHero />
             <HomeAboutMe />
             <HomeExperience />
-            <section
-                className="dummy"
-                style={{
-                    display: "flex",
-                    width: "100%",
-                    justifyContent: "center",
-                    paddingBlock: "300px",
-                }}
-            >
-                <strong>THIS WEBSITE IS CURRENTLY UNDER-DEVELOPMENT.</strong>
-            </section>
+            <UnderDevelopment />
         </Fragment>
     );
 }

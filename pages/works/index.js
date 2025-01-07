@@ -21,6 +21,7 @@ import CarouselWorks from "../components/works/CarouselWorks";
 import Head from "next/head";
 
 import WorkSection from "../components/works/WorkSection";
+import UnderDevelopment from "pages/components/under-development";
 
 export default function Index() {
     const [datas, setDatas] = useState([]);
@@ -70,10 +71,7 @@ export default function Index() {
                 </>
             ) : (
                 <>
-                    {/* <CarouselWorks datas={datas} /> */}
-                    <WorkSection />
-                    <WorkSection />
-                    <WorkSection />
+                    <UnderDevelopment />
                 </>
             )}
         </>
