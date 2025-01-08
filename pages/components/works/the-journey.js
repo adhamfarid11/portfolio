@@ -44,7 +44,7 @@ export default function TheJourney() {
                               <Skeleton
                                   variant="rectangular"
                                   height={300}
-                                  index={index}
+                                  key={index}
                               />
                           ))
                         : images.map((src, index) => (
