@@ -5,7 +5,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 export default function TheJourney() {
     const [images, setImages] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     // Fetch images from the Cloudinary API
     useEffect(() => {
