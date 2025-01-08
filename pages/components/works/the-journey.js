@@ -27,6 +27,7 @@ export default function TheJourney() {
     return (
         <section className="wrapper-the-journey">
             <div className="the-journey-title">
+                <p>Every Step, a Story Worth Telling.</p>
                 <h2>The Journey</h2>
             </div>
             <ResponsiveMasonry

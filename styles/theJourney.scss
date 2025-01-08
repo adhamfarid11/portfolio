@@ -2,10 +2,11 @@ section.wrapper-the-journey {
     position: relative;
     padding-top: 80px;
     .the-journey-title {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // height: 50vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
         position: sticky;
         top: 0;
         color: white;
