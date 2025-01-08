@@ -41,7 +41,11 @@ export default function TheJourney() {
                 <Masonry gutter="10px">
                     {loading
                         ? [...Array(8)].map((_, index) => (
-                              <Skeleton variant="rectangular" height={300} />
+                              <Skeleton
+                                  variant="rectangular"
+                                  height={300}
+                                  index={index}
+                              />
                           ))
                         : images.map((src, index) => (
                               <div className="masonry-item" key={index}>
