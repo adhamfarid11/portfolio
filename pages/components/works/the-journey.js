@@ -1,4 +1,5 @@
 "use client";
+import { Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
@@ -37,23 +38,29 @@ export default function TheJourney() {
                 }}
             >
                 <Masonry gutter="10px">
-                    {loading ? (
-                        <h1>Loading</h1>
-                    ) : (
-                        images.map((src, index) => (
-                            <div className="masonry-item" key={index}>
-                                <img
-                                    src={src}
-                                    alt={`image-${index}`}
-                                    style={{
-                                        width: "100%", // Makes the image fill the column
-                                        display: "block", // Removes inline gaps
-                                        borderRadius: "5px", // Optional: Add some styling
-                                    }}
-                                />
-                            </div>
-                        ))
-                    )}
+                    {loading
+                        ? [...Array(8)].map((_, index) => (
+                              <Skeleton variant="rectangular" height={300} />
+                          ))
+                        : images.map((src, index) => (
+                              <div className="masonry-item" key={index}>
+                                  <img
+                                      src={`${src}?q_auto,f_auto,w_500`} // Add Cloudinary transformations
+                                      alt={`image-${index}`}
+                                      loading="lazy"
+                                      onError={(e) => {
+                                          e.target.src = "/fallback-image.jpg"; // Fallback image
+                                      }}
+                                      style={{
+                                          width: "100%",
+                                          display: "block",
+                                          borderRadius: "5px",
+                                          boxShadow:
+                                              "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                                      }}
+                                  />
+                              </div>
+                          ))}
                 </Masonry>
             </ResponsiveMasonry>
         </section>
