@@ -28,7 +28,7 @@ export default function ListWorksMain() {
 
     return (
         <div>
-            {datas.map((data) => (
+            {datas?.map((data) => (
                 <Card
                     key={data.id}
                     title={data.title}

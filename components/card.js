@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Image as ImageChakra } from "@chakra-ui/react";
-import { useState } from "react";
 import { tech_stacks_list } from "../data/tech_stack";
 import myLogo from "../public/Logo.svg";
 
@@ -32,13 +31,13 @@ function handleYear(year_start, year_end) {
     }
 
     if (!year_start) {
-        return <h5>{year_end}</h5>;
+        return <h4>{year_end}</h4>;
     }
 
     return (
-        <h5>
+        <h4>
             {year_start} - {year_end}
-        </h5>
+        </h4>
     );
 }
 
@@ -52,7 +51,6 @@ function Card({
     year_start,
     year_end,
 }) {
-    console.log(image_url);
     return (
         <>
             <motion.div
@@ -88,10 +86,10 @@ function Card({
                     <div className="image">
                         {image_url ? (
                             <Image
-                                alt="Adham Farid Logo"
+                                alt={companyName}
                                 layout="fill"
                                 src={image_url}
-                                objectFit="fit"
+                                objectFit="cover"
                             />
                         ) : (
                             <a className="web-content-image">

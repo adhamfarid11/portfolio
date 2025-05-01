@@ -212,7 +212,7 @@ function MyApp({ Component, pageProps }, props) {
                                             </div>
 
                                             <div className="menu-item">
-                                                <Link href="/works/">
+                                                <Link href="/the-journey/">
                                                     Journey
                                                 </Link>
                                                 <p className="desktop">,</p>

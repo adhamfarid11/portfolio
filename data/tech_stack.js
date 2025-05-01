@@ -16,6 +16,10 @@ export const tech_stacks_list = [
         link: "https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png",
     },
     {
+        tech: "springboot",
+        link: "https://user-images.githubusercontent.com/84719774/129191080-723b3b46-4e0b-4aa5-8eb9-654c2c025b18.png",
+    },
+    {
         tech: "ts",
         link: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
     },

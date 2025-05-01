@@ -19,32 +19,6 @@ export default function HomeExperience() {
                     <ListWorksMain />
                 </div>
             </div>
-            {/* <div className="outer">
-                <div className="wrapper">
-                    <div className="wrapper-fixed">
-                        <div className="fixed">
-                            <p className="desktop-only">PROJECTS</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="content">
-                    <ListProjectMain />
-                    <SeeMore />
-                </div>
-            </div>
-            <div className="outer">
-                <div className="wrapper">
-                    <div className="wrapper-fixed">
-                        <div className="fixed">
-                            <p className="desktop-only">COMMITTTE</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="content">
-                    <ListCommitteeMain />
-                    <SeeMore />
-                </div>
-            </div> */}
         </section>
     );
 }
